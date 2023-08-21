@@ -1,0 +1,3746 @@
+<style> .hljs { white-space: pre-wrap !important; word-wrap: break-word !important; } </style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+  <style>
+body {
+  background-color: #ffffff;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  -webkit-transform: translate(0px) scale(1.15);
+  transform: translate(0px) scale(1.15);
+}
+
+select:focus {
+  outline: none !important;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+}
+
+.markdown-body [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #007AFF;
+  text-decoration: underline;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+}
+
+.markdown-body hr::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body::before {
+  display: table;
+  content: "";
+}
+
+.markdown-body::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.markdown-body .anchor {
+  float: left;
+  padding-right: 4px;
+  margin-left: -20px;
+  line-height: 1;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+  background: #f9f9f9;
+  padding: 0.5em 10px;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body blockquote:before {
+  margin-right: 0.25em;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 14px;
+  margin-bottom: 16px;
+  padding-top: 10px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.5em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: 0.875em;
+}
+
+.markdown-body h6 {
+  font-size: 0.85em;
+  color: #6a737d;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: 0.25em;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+  background-color: #f6f8fa;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body :not(pre)>code {
+  padding: 0.14em 0.3em;
+  margin: 0;
+  font-size: 85%;
+  vertical-align: 5%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dfe2e5;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border-radius: 4px;
+  border: thin solid #e0e0e0;
+}
+
+.markdown-body pre code {
+  max-width: auto;
+  padding: 16px;
+  margin: 0;
+  line-height: inherit;
+  word-wrap: normal;
+  border-radius: 3px;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #444d56;
+  vertical-align: middle;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.2em 0.16em -1.25em;
+  vertical-align: middle;
+}
+
+.markdown-body .highlighter {
+  background-color: rgba(255, 255, 0, 0.8);
+}
+
+.no-file-access {
+  color: red !important;
+  text-decoration: none !important;
+}
+
+.syntax-picker {
+  margin-left: -4px;
+  margin-bottom: 8px;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.syntax-picker::-webkit-scrollbar { 
+  display: none;
+}
+
+.syntax-light-theme-picker {
+  display: inline;
+}
+
+.syntax-dark-theme-picker {
+  display: none;
+}
+
+.toc-item {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.toc-item > a {
+  color: #24292e !important;
+  text-decoration: none !important;
+}
+
+.toc-level-1, .toc-level-2, .toc-level-3 {
+  font-weight: 500;
+}
+
+.toc-level-1 {
+  font-size: 19px;
+}
+
+.toc-level-2 {
+  font-size: 18px;
+}
+
+.toc-level-3 {
+  font-size: 17px;
+}
+
+.toc-level-4, .toc-level-5, .toc-level-6 {
+  font-size: 16px;
+}
+
+.embedded-file {
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #dddddd;
+}
+</style>
+  <style>
+body {
+  background-color: #0f0f0f;
+}
+
+.markdown-body {
+  color: #e3e3e3;
+}
+
+.markdown-body a {
+  color: #0A84FF;
+}
+
+.markdown-body hr {
+  border-bottom: 1px solid #404040;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+  color: #ffffff;
+}
+
+.markdown-body blockquote {
+  color: #acacac;
+  border-left: 0.25em solid #303030;
+  background: #202020;
+}
+
+.markdown-body kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: solid 1px #c6cbd1;
+  border-bottom-color: #959da5;
+  box-shadow: inset 0 -1px 0 #959da5;
+}
+
+.markdown-body h1 {
+  border-bottom: 1px solid #303030;
+}
+
+.markdown-body h2 {
+  border-bottom: 1px solid #303030;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  color: #6a737d;
+}
+
+.markdown-body table th {
+  background-color: #292929;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  border: 1px solid #404040;
+}
+
+.markdown-body table tr {
+  background-color: #212121;
+  border-top: 1px solid #c6cbd1;
+  color: #e3e3e3;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #292929;
+}
+
+.markdown-body img {
+  background-color: #0f0f0f;
+}
+
+.markdown-body :not(pre)>code {
+  background-color: #292929;
+  border-color: #404040;
+}
+
+.markdown-body pre {
+  border: thin solid #303030;
+}
+
+.markdown-body kbd {
+  color: #444d56;
+  background-color: #fafbfc;
+  border: solid 1px #d1d5da;
+  border-bottom-color: #c6cbd1;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+}
+
+.markdown-body .highlighter {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
+.syntax-light-theme-picker {
+  display: none;
+}
+
+.syntax-dark-theme-picker {
+  display: inline;
+}
+
+.toc-item {
+  border-bottom: 1px solid #404040;
+}
+
+.toc-item > a {
+  color: #e3e3e3 !important;
+}
+
+.embedded-file {
+  border-color: #444444;
+}
+</style>
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 15px 45px;
+      font-family: "system-ui", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      line-height: 1.5;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .markdown-body {
+        transform: scale(1);
+        transform-origin: top center;
+      }
+    }
+    .sequence svg, .flowchart svg, .mermaid svg, .plantuml-svg {
+      background: white;
+      margin-bottom: 24px;
+      margin-right: 24px;
+      border-radius: 3px;
+    }
+    .plantuml-svg {
+      display: block;
+    }
+  </style>
+  <style>
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#ffffff;background:#1c1b1b}.hljs-comment{color:#999999}.hljs-keyword,.hljs-selector-tag,.hljs-meta-keyword,.hljs-doctag,.hljs-section,.hljs-selector-class,.hljs-meta,.hljs-selector-pseudo,.hljs-attr{color:#88aece}.hljs-attribute{color:v#c59bc1}.hljs-name,.hljs-type,.hljs-number,.hljs-selector-id,.hljs-quote,.hljs-template-tag,.hljs-built_in,.hljs-title,.hljs-literal{color:#f08d49}.hljs-string,.hljs-regexp,.hljs-symbol,.hljs-variable,.hljs-template-variable,.hljs-link,.hljs-selector-attr,.hljs-meta-string{color:#b5bd68}.hljs-bullet,.hljs-code{color:#cccccc}.hljs-deletion{color:#de7176}.hljs-addition{color:#76c490}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}
+</style>
+<script>
+  /*
+Syntax highlighting with language autodetection.
+https://highlightjs.org/
+*/
+
+(function(factory) {
+
+  // Find the global object for export to both the browser and web workers.
+  var globalObject = typeof window === 'object' && window ||
+                     typeof self === 'object' && self;
+
+  // Setup highlight.js for different environments. First is Node.js or
+  // CommonJS.
+  // `nodeType` is checked to ensure that `exports` is not a HTML element.
+  if(typeof exports !== 'undefined' && !exports.nodeType) {
+    factory(exports);
+  } else if(globalObject) {
+    // Export hljs globally even when using AMD for cases when this script
+    // is loaded with others that may still expect a global hljs.
+    globalObject.hljs = factory({});
+
+    // Finally register the global hljs with AMD.
+    if(typeof define === 'function' && define.amd) {
+      define([], function() {
+        return globalObject.hljs;
+      });
+    }
+  }
+
+}(function(hljs) {
+  // Convenience variables for build-in objects
+  var ArrayProto = [],
+      objectKeys = Object.keys;
+
+  // Global internal variables used within the highlight.js library.
+  var languages = {},
+      aliases   = {};
+
+  // safe/production mode - swallows more errors, tries to keep running
+  // even if a single syntax or parse hits a fatal error
+  var SAFE_MODE = true;
+
+  // Regular expressions used throughout the highlight.js library.
+  var noHighlightRe    = /^(no-?highlight|plain|text)$/i,
+      languagePrefixRe = /\blang(?:uage)?-([\w-]+)\b/i,
+      fixMarkupRe      = /((^(<[^>]+>|\t|)+|(?:\n)))/gm;
+
+  // The object will be assigned by the build tool. It used to synchronize API
+  // of external language files with minified version of the highlight.js library.
+  var API_REPLACES;
+
+  var spanEndTag = '</span>';
+  var LANGUAGE_NOT_FOUND = "Could not find the language '{}', did you forget to load/include a language module?";
+
+  // Global options used when within external APIs. This is modified when
+  // calling the `hljs.configure` function.
+  var options = {
+    classPrefix: 'hljs-',
+    tabReplace: null,
+    useBR: false,
+    languages: undefined
+  };
+
+  // keywords that should have no default relevance value
+  var COMMON_KEYWORDS = 'of and for in not or if then'.split(' ');
+
+
+  /* Utility functions */
+
+  function escape(value) {
+    return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function tag(node) {
+    return node.nodeName.toLowerCase();
+  }
+
+  function testRe(re, lexeme) {
+    var match = re && re.exec(lexeme);
+    return match && match.index === 0;
+  }
+
+  function isNotHighlighted(language) {
+    return noHighlightRe.test(language);
+  }
+
+  function blockLanguage(block) {
+    var i, match, length, _class;
+    var classes = block.className + ' ';
+
+    classes += block.parentNode ? block.parentNode.className : '';
+
+    // language-* takes precedence over non-prefixed class names.
+    match = languagePrefixRe.exec(classes);
+    if (match) {
+      var language = getLanguage(match[1]);
+      if (!language) {
+        console.warn(LANGUAGE_NOT_FOUND.replace("{}", match[1]));
+        console.warn("Falling back to no-highlight mode for this block.", block);
+      }
+      return language ? match[1] : 'no-highlight';
+    }
+
+    classes = classes.split(/\s+/);
+
+    for (i = 0, length = classes.length; i < length; i++) {
+      _class = classes[i];
+
+      if (isNotHighlighted(_class) || getLanguage(_class)) {
+        return _class;
+      }
+    }
+  }
+
+  /**
+   * performs a shallow merge of multiple objects into one
+   *
+   * @arguments list of objects with properties to merge
+   * @returns a single new object
+   */
+  function inherit(parent) {  // inherit(parent, override_obj, override_obj, ...)
+    var key;
+    var result = {};
+    var objects = Array.prototype.slice.call(arguments, 1);
+
+    for (key in parent)
+      result[key] = parent[key];
+    objects.forEach(function(obj) {
+      for (key in obj)
+        result[key] = obj[key];
+    });
+    return result;
+  }
+
+  /* Stream merging */
+
+  function nodeStream(node) {
+    var result = [];
+    (function _nodeStream(node, offset) {
+      for (var child = node.firstChild; child; child = child.nextSibling) {
+        if (child.nodeType === 3)
+          offset += child.nodeValue.length;
+        else if (child.nodeType === 1) {
+          result.push({
+            event: 'start',
+            offset: offset,
+            node: child
+          });
+          offset = _nodeStream(child, offset);
+          // Prevent void elements from having an end tag that would actually
+          // double them in the output. There are more void elements in HTML
+          // but we list only those realistically expected in code display.
+          if (!tag(child).match(/br|hr|img|input/)) {
+            result.push({
+              event: 'stop',
+              offset: offset,
+              node: child
+            });
+          }
+        }
+      }
+      return offset;
+    })(node, 0);
+    return result;
+  }
+
+  function mergeStreams(original, highlighted, value) {
+    var processed = 0;
+    var result = '';
+    var nodeStack = [];
+
+    function selectStream() {
+      if (!original.length || !highlighted.length) {
+        return original.length ? original : highlighted;
+      }
+      if (original[0].offset !== highlighted[0].offset) {
+        return (original[0].offset < highlighted[0].offset) ? original : highlighted;
+      }
+
+      /*
+      To avoid starting the stream just before it should stop the order is
+      ensured that original always starts first and closes last:
+
+      if (event1 == 'start' && event2 == 'start')
+        return original;
+      if (event1 == 'start' && event2 == 'stop')
+        return highlighted;
+      if (event1 == 'stop' && event2 == 'start')
+        return original;
+      if (event1 == 'stop' && event2 == 'stop')
+        return highlighted;
+
+      ... which is collapsed to:
+      */
+      return highlighted[0].event === 'start' ? original : highlighted;
+    }
+
+    function open(node) {
+      function attr_str(a) {
+        return ' ' + a.nodeName + '="' + escape(a.value).replace(/"/g, '&quot;') + '"';
+      }
+      result += '<' + tag(node) + ArrayProto.map.call(node.attributes, attr_str).join('') + '>';
+    }
+
+    function close(node) {
+      result += '</' + tag(node) + '>';
+    }
+
+    function render(event) {
+      (event.event === 'start' ? open : close)(event.node);
+    }
+
+    while (original.length || highlighted.length) {
+      var stream = selectStream();
+      result += escape(value.substring(processed, stream[0].offset));
+      processed = stream[0].offset;
+      if (stream === original) {
+        /*
+        On any opening or closing tag of the original markup we first close
+        the entire highlighted node stack, then render the original tag along
+        with all the following original tags at the same offset and then
+        reopen all the tags on the highlighted stack.
+        */
+        nodeStack.reverse().forEach(close);
+        do {
+          render(stream.splice(0, 1)[0]);
+          stream = selectStream();
+        } while (stream === original && stream.length && stream[0].offset === processed);
+        nodeStack.reverse().forEach(open);
+      } else {
+        if (stream[0].event === 'start') {
+          nodeStack.push(stream[0].node);
+        } else {
+          nodeStack.pop();
+        }
+        render(stream.splice(0, 1)[0]);
+      }
+    }
+    return result + escape(value.substr(processed));
+  }
+
+  /* Initialization */
+
+  function dependencyOnParent(mode) {
+    if (!mode) return false;
+
+    return mode.endsWithParent || dependencyOnParent(mode.starts);
+  }
+
+  function expand_or_clone_mode(mode) {
+    if (mode.variants && !mode.cached_variants) {
+      mode.cached_variants = mode.variants.map(function(variant) {
+        return inherit(mode, {variants: null}, variant);
+      });
+    }
+
+    // EXPAND
+    // if we have variants then essentially "replace" the mode with the variants
+    // this happens in compileMode, where this function is called from
+    if (mode.cached_variants)
+      return mode.cached_variants;
+
+    // CLONE
+    // if we have dependencies on parents then we need a unique
+    // instance of ourselves, so we can be reused with many
+    // different parents without issue
+    if (dependencyOnParent(mode))
+      return [inherit(mode, { starts: mode.starts ? inherit(mode.starts) : null })];
+
+    if (Object.isFrozen(mode))
+      return [inherit(mode)];
+
+    // no special dependency issues, just return ourselves
+    return [mode];
+  }
+
+  function restoreLanguageApi(obj) {
+    if(API_REPLACES && !obj.langApiRestored) {
+      obj.langApiRestored = true;
+      for(var key in API_REPLACES) {
+        if (obj[key]) {
+          obj[API_REPLACES[key]] = obj[key];
+        }
+      }
+      (obj.contains || []).concat(obj.variants || []).forEach(restoreLanguageApi);
+    }
+  }
+
+  function compileKeywords(rawKeywords, case_insensitive) {
+      var compiled_keywords = {};
+
+      if (typeof rawKeywords === 'string') { // string
+        splitAndCompile('keyword', rawKeywords);
+      } else {
+        objectKeys(rawKeywords).forEach(function (className) {
+          splitAndCompile(className, rawKeywords[className]);
+        });
+      }
+    return compiled_keywords;
+
+    // ---
+
+    function splitAndCompile(className, str) {
+      if (case_insensitive) {
+        str = str.toLowerCase();
+      }
+      str.split(' ').forEach(function(keyword) {
+        var pair = keyword.split('|');
+        compiled_keywords[pair[0]] = [className, scoreForKeyword(pair[0], pair[1])];
+      });
+    }
+  }
+
+  function scoreForKeyword(keyword, providedScore) {
+    // manual scores always win over common keywords
+    // so you can force a score of 1 if you really insist
+    if (providedScore)
+      return Number(providedScore);
+
+    return commonKeyword(keyword) ? 0 : 1;
+  }
+
+  function commonKeyword(word) {
+    return COMMON_KEYWORDS.indexOf(word.toLowerCase()) != -1;
+  }
+
+  function compileLanguage(language) {
+
+    function reStr(re) {
+        return (re && re.source) || re;
+    }
+
+    function langRe(value, global) {
+      return new RegExp(
+        reStr(value),
+        'm' + (language.case_insensitive ? 'i' : '') + (global ? 'g' : '')
+      );
+    }
+
+    function reCountMatchGroups(re) {
+      return (new RegExp(re.toString() + '|')).exec('').length - 1;
+    }
+
+    // joinRe logically computes regexps.join(separator), but fixes the
+    // backreferences so they continue to match.
+    // it also places each individual regular expression into it's own
+    // match group, keeping track of the sequencing of those match groups
+    // is currently an exercise for the caller. :-)
+    function joinRe(regexps, separator) {
+      // backreferenceRe matches an open parenthesis or backreference. To avoid
+      // an incorrect parse, it additionally matches the following:
+      // - [...] elements, where the meaning of parentheses and escapes change
+      // - other escape sequences, so we do not misparse escape sequences as
+      //   interesting elements
+      // - non-matching or lookahead parentheses, which do not capture. These
+      //   follow the '(' with a '?'.
+      var backreferenceRe = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+      var numCaptures = 0;
+      var ret = '';
+      for (var i = 0; i < regexps.length; i++) {
+        numCaptures += 1;
+        var offset = numCaptures;
+        var re = reStr(regexps[i]);
+        if (i > 0) {
+          ret += separator;
+        }
+        ret += "(";
+        while (re.length > 0) {
+          var match = backreferenceRe.exec(re);
+          if (match == null) {
+            ret += re;
+            break;
+          }
+          ret += re.substring(0, match.index);
+          re = re.substring(match.index + match[0].length);
+          if (match[0][0] == '\\' && match[1]) {
+            // Adjust the backreference.
+            ret += '\\' + String(Number(match[1]) + offset);
+          } else {
+            ret += match[0];
+            if (match[0] == '(') {
+              numCaptures++;
+            }
+          }
+        }
+        ret += ")";
+      }
+      return ret;
+    }
+
+    function buildModeRegex(mode) {
+
+      var matchIndexes = {};
+      var matcherRe;
+      var regexes = [];
+      var matcher = {};
+      var matchAt = 1;
+
+      function addRule(rule, regex) {
+        matchIndexes[matchAt] = rule;
+        regexes.push([rule, regex]);
+        matchAt += reCountMatchGroups(regex) + 1;
+      }
+
+      var term;
+      for (var i=0; i < mode.contains.length; i++) {
+        var re;
+        term = mode.contains[i];
+        if (term.beginKeywords) {
+          re = '\\.?(?:' + term.begin + ')\\.?';
+        } else {
+          re = term.begin;
+        }
+        addRule(term, re);
+      }
+      if (mode.terminator_end)
+        addRule("end", mode.terminator_end);
+      if (mode.illegal)
+        addRule("illegal", mode.illegal);
+
+      var terminators = regexes.map(function(el) { return el[1]; });
+      matcherRe = langRe(joinRe(terminators, '|'), true);
+
+      matcher.lastIndex = 0;
+      matcher.exec = function(s) {
+        var rule;
+
+        if( regexes.length === 0) return null;
+
+        matcherRe.lastIndex = matcher.lastIndex;
+        var match = matcherRe.exec(s);
+        if (!match) { return null; }
+
+        for(var i = 0; i<match.length; i++) {
+          if (match[i] != undefined && matchIndexes["" +i] != undefined ) {
+            rule = matchIndexes[""+i];
+            break;
+          }
+        }
+
+        // illegal or end match
+        if (typeof rule === "string") {
+          match.type = rule;
+          match.extra = [mode.illegal, mode.terminator_end];
+        } else {
+          match.type = "begin";
+          match.rule = rule;
+        }
+        return match;
+      };
+
+      return matcher;
+    }
+
+    function compileMode(mode, parent) {
+      if (mode.compiled)
+        return;
+      mode.compiled = true;
+
+      mode.keywords = mode.keywords || mode.beginKeywords;
+      if (mode.keywords)
+        mode.keywords = compileKeywords(mode.keywords, language.case_insensitive);
+
+      mode.lexemesRe = langRe(mode.lexemes || /[\\$\w]+/, true);
+
+      if (parent) {
+        if (mode.beginKeywords) {
+          mode.begin = '\\b(' + mode.beginKeywords.split(' ').join('|') + ')\\b';
+        }
+        if (!mode.begin)
+          mode.begin = /\B|\b/;
+        mode.beginRe = langRe(mode.begin);
+        if (mode.endSameAsBegin)
+          mode.end = mode.begin;
+        if (!mode.end && !mode.endsWithParent)
+          mode.end = /\B|\b/;
+        if (mode.end)
+          mode.endRe = langRe(mode.end);
+        mode.terminator_end = reStr(mode.end) || '';
+        if (mode.endsWithParent && parent.terminator_end)
+          mode.terminator_end += (mode.end ? '|' : '') + parent.terminator_end;
+      }
+      if (mode.illegal)
+        mode.illegalRe = langRe(mode.illegal);
+      if (mode.relevance == null)
+        mode.relevance = 1;
+      if (!mode.contains) {
+        mode.contains = [];
+      }
+      mode.contains = Array.prototype.concat.apply([], mode.contains.map(function(c) {
+        return expand_or_clone_mode(c === 'self' ? mode : c);
+      }));
+      mode.contains.forEach(function(c) {compileMode(c, mode);});
+
+      if (mode.starts) {
+        compileMode(mode.starts, parent);
+      }
+
+      mode.terminators = buildModeRegex(mode);
+    }
+
+    // self is not valid at the top-level
+    if (language.contains && language.contains.indexOf('self') != -1) {
+      if (!SAFE_MODE) {
+        throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.")
+      } else {
+        // silently remove the broken rule (effectively ignoring it), this has historically
+        // been the behavior in the past, so this removal preserves compatibility with broken
+        // grammars when running in Safe Mode
+        language.contains = language.contains.filter(function(mode) { return mode != 'self'; });
+      }
+    }
+    compileMode(language);
+  }
+
+  /*
+  Core highlighting function. Accepts a language name, or an alias, and a
+  string with the code to highlight. Returns an object with the following
+  properties:
+
+  - relevance (int)
+  - value (an HTML string with highlighting markup)
+
+  */
+  function highlight(name, value, ignore_illegals, continuation) {
+
+    function escapeRe(value) {
+      return new RegExp(value.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'm');
+    }
+
+    function endOfMode(mode, lexeme) {
+      if (testRe(mode.endRe, lexeme)) {
+        while (mode.endsParent && mode.parent) {
+          mode = mode.parent;
+        }
+        return mode;
+      }
+      if (mode.endsWithParent) {
+        return endOfMode(mode.parent, lexeme);
+      }
+    }
+
+    function keywordMatch(mode, match) {
+      var match_str = language.case_insensitive ? match[0].toLowerCase() : match[0];
+      return mode.keywords.hasOwnProperty(match_str) && mode.keywords[match_str];
+    }
+
+    function buildSpan(className, insideSpan, leaveOpen, noPrefix) {
+      if (!leaveOpen && insideSpan === '') return '';
+      if (!className) return insideSpan;
+
+      var classPrefix = noPrefix ? '' : options.classPrefix,
+          openSpan    = '<span class="' + classPrefix,
+          closeSpan   = leaveOpen ? '' : spanEndTag;
+
+      openSpan += className + '">';
+
+      return openSpan + insideSpan + closeSpan;
+    }
+
+    function processKeywords() {
+      var keyword_match, last_index, match, result;
+
+      if (!top.keywords)
+        return escape(mode_buffer);
+
+      result = '';
+      last_index = 0;
+      top.lexemesRe.lastIndex = 0;
+      match = top.lexemesRe.exec(mode_buffer);
+
+      while (match) {
+        result += escape(mode_buffer.substring(last_index, match.index));
+        keyword_match = keywordMatch(top, match);
+        if (keyword_match) {
+          relevance += keyword_match[1];
+          result += buildSpan(keyword_match[0], escape(match[0]));
+        } else {
+          result += escape(match[0]);
+        }
+        last_index = top.lexemesRe.lastIndex;
+        match = top.lexemesRe.exec(mode_buffer);
+      }
+      return result + escape(mode_buffer.substr(last_index));
+    }
+
+    function processSubLanguage() {
+      var explicit = typeof top.subLanguage === 'string';
+      if (explicit && !languages[top.subLanguage]) {
+        return escape(mode_buffer);
+      }
+
+      var result = explicit ?
+                   highlight(top.subLanguage, mode_buffer, true, continuations[top.subLanguage]) :
+                   highlightAuto(mode_buffer, top.subLanguage.length ? top.subLanguage : undefined);
+
+      // Counting embedded language score towards the host language may be disabled
+      // with zeroing the containing mode relevance. Use case in point is Markdown that
+      // allows XML everywhere and makes every XML snippet to have a much larger Markdown
+      // score.
+      if (top.relevance > 0) {
+        relevance += result.relevance;
+      }
+      if (explicit) {
+        continuations[top.subLanguage] = result.top;
+      }
+      return buildSpan(result.language, result.value, false, true);
+    }
+
+    function processBuffer() {
+      result += (top.subLanguage != null ? processSubLanguage() : processKeywords());
+      mode_buffer = '';
+    }
+
+    function startNewMode(mode) {
+      result += mode.className? buildSpan(mode.className, '', true): '';
+      top = Object.create(mode, {parent: {value: top}});
+    }
+
+
+    function doBeginMatch(match) {
+      var lexeme = match[0];
+      var new_mode = match.rule;
+
+      if (new_mode && new_mode.endSameAsBegin) {
+        new_mode.endRe = escapeRe( lexeme );
+      }
+
+      if (new_mode.skip) {
+        mode_buffer += lexeme;
+      } else {
+        if (new_mode.excludeBegin) {
+          mode_buffer += lexeme;
+        }
+        processBuffer();
+        if (!new_mode.returnBegin && !new_mode.excludeBegin) {
+          mode_buffer = lexeme;
+        }
+      }
+      startNewMode(new_mode);
+      return new_mode.returnBegin ? 0 : lexeme.length;
+    }
+
+    function doEndMatch(match) {
+      var lexeme = match[0];
+      var matchPlusRemainder = value.substr(match.index);
+      var end_mode = endOfMode(top, matchPlusRemainder);
+      if (!end_mode) { return; }
+
+      var origin = top;
+      if (origin.skip) {
+        mode_buffer += lexeme;
+      } else {
+        if (!(origin.returnEnd || origin.excludeEnd)) {
+          mode_buffer += lexeme;
+        }
+        processBuffer();
+        if (origin.excludeEnd) {
+          mode_buffer = lexeme;
+        }
+      }
+      do {
+        if (top.className) {
+          result += spanEndTag;
+        }
+        if (!top.skip && !top.subLanguage) {
+          relevance += top.relevance;
+        }
+        top = top.parent;
+      } while (top !== end_mode.parent);
+      if (end_mode.starts) {
+        if (end_mode.endSameAsBegin) {
+          end_mode.starts.endRe = end_mode.endRe;
+        }
+        startNewMode(end_mode.starts);
+      }
+      return origin.returnEnd ? 0 : lexeme.length;
+    }
+
+    var lastMatch = {};
+    function processLexeme(text_before_match, match) {
+
+      var lexeme = match && match[0];
+
+      // add non-matched text to the current mode buffer
+      mode_buffer += text_before_match;
+
+      if (lexeme == null) {
+        processBuffer();
+        return 0;
+      }
+
+      // we've found a 0 width match and we're stuck, so we need to advance
+      // this happens when we have badly behaved rules that have optional matchers to the degree that
+      // sometimes they can end up matching nothing at all
+      // Ref: https://github.com/highlightjs/highlight.js/issues/2140
+      if (lastMatch.type=="begin" && match.type=="end" && lastMatch.index == match.index && lexeme === "") {
+        // spit the "skipped" character that our regex choked on back into the output sequence
+        mode_buffer += value.slice(match.index, match.index + 1);
+        return 1;
+      }
+      lastMatch = match;
+
+      if (match.type==="begin") {
+        return doBeginMatch(match);
+      } else if (match.type==="illegal" && !ignore_illegals) {
+        // illegal match, we do not continue processing
+        throw new Error('Illegal lexeme "' + lexeme + '" for mode "' + (top.className || '<unnamed>') + '"');
+      } else if (match.type==="end") {
+        var processed = doEndMatch(match);
+        if (processed != undefined)
+          return processed;
+      }
+
+      /*
+      Why might be find ourselves here?  Only one occasion now.  An end match that was
+      triggered but could not be completed.  When might this happen?  When an `endSameasBegin`
+      rule sets the end rule to a specific match.  Since the overall mode termination rule that's
+      being used to scan the text isn't recompiled that means that any match that LOOKS like
+      the end (but is not, because it is not an exact match to the beginning) will
+      end up here.  A definite end match, but when `doEndMatch` tries to "reapply"
+      the end rule and fails to match, we wind up here, and just silently ignore the end.
+
+      This causes no real harm other than stopping a few times too many.
+      */
+
+      mode_buffer += lexeme;
+      return lexeme.length;
+    }
+
+    var language = getLanguage(name);
+    if (!language) {
+      console.error(LANGUAGE_NOT_FOUND.replace("{}", name));
+      throw new Error('Unknown language: "' + name + '"');
+    }
+
+    compileLanguage(language);
+    var top = continuation || language;
+    var continuations = {}; // keep continuations for sub-languages
+    var result = '', current;
+    for(current = top; current !== language; current = current.parent) {
+      if (current.className) {
+        result = buildSpan(current.className, '', true) + result;
+      }
+    }
+    var mode_buffer = '';
+    var relevance = 0;
+    try {
+      var match, count, index = 0;
+      while (true) {
+        top.terminators.lastIndex = index;
+        match = top.terminators.exec(value);
+        if (!match)
+          break;
+        count = processLexeme(value.substring(index, match.index), match);
+        index = match.index + count;
+      }
+      processLexeme(value.substr(index));
+      for(current = top; current.parent; current = current.parent) { // close dangling modes
+        if (current.className) {
+          result += spanEndTag;
+        }
+      }
+      return {
+        relevance: relevance,
+        value: result,
+        illegal:false,
+        language: name,
+        top: top
+      };
+    } catch (err) {
+      if (err.message && err.message.indexOf('Illegal') !== -1) {
+        return {
+          illegal: true,
+          relevance: 0,
+          value: escape(value)
+        };
+      } else if (SAFE_MODE) {
+        return {
+          relevance: 0,
+          value: escape(value),
+          language: name,
+          top: top,
+          errorRaised: err
+        };
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  /*
+  Highlighting with language detection. Accepts a string with the code to
+  highlight. Returns an object with the following properties:
+
+  - language (detected language)
+  - relevance (int)
+  - value (an HTML string with highlighting markup)
+  - second_best (object with the same structure for second-best heuristically
+    detected language, may be absent)
+
+  */
+  function highlightAuto(text, languageSubset) {
+    languageSubset = languageSubset || options.languages || objectKeys(languages);
+    var result = {
+      relevance: 0,
+      value: escape(text)
+    };
+    var second_best = result;
+    languageSubset.filter(getLanguage).filter(autoDetection).forEach(function(name) {
+      var current = highlight(name, text, false);
+      current.language = name;
+      if (current.relevance > second_best.relevance) {
+        second_best = current;
+      }
+      if (current.relevance > result.relevance) {
+        second_best = result;
+        result = current;
+      }
+    });
+    if (second_best.language) {
+      result.second_best = second_best;
+    }
+    return result;
+  }
+
+  /*
+  Post-processing of the highlighted markup:
+
+  - replace TABs with something more useful
+  - replace real line-breaks with '<br>' for non-pre containers
+
+  */
+  function fixMarkup(value) {
+    if (!(options.tabReplace || options.useBR)) {
+      return value;
+    }
+
+    return value.replace(fixMarkupRe, function(match, p1) {
+        if (options.useBR && match === '\n') {
+          return '<br>';
+        } else if (options.tabReplace) {
+          return p1.replace(/\t/g, options.tabReplace);
+        }
+        return '';
+    });
+  }
+
+  function buildClassName(prevClassName, currentLang, resultLang) {
+    var language = currentLang ? aliases[currentLang] : resultLang,
+        result   = [prevClassName.trim()];
+
+    if (!prevClassName.match(/\bhljs\b/)) {
+      result.push('hljs');
+    }
+
+    if (prevClassName.indexOf(language) === -1) {
+      result.push(language);
+    }
+
+    return result.join(' ').trim();
+  }
+
+  /*
+  Applies highlighting to a DOM node containing code. Accepts a DOM node and
+  two optional parameters for fixMarkup.
+  */
+  function highlightBlock(block) {
+    var node, originalStream, result, resultNode, text;
+    var language = blockLanguage(block);
+
+    if (isNotHighlighted(language))
+        return;
+
+    if (options.useBR) {
+      node = document.createElement('div');
+      node.innerHTML = block.innerHTML.replace(/\n/g, '').replace(/<br[ \/]*>/g, '\n');
+    } else {
+      node = block;
+    }
+    text = node.textContent;
+    result = language ? highlight(language, text, true) : highlightAuto(text);
+
+    originalStream = nodeStream(node);
+    if (originalStream.length) {
+      resultNode = document.createElement('div');
+      resultNode.innerHTML = result.value;
+      result.value = mergeStreams(originalStream, nodeStream(resultNode), text);
+    }
+    result.value = fixMarkup(result.value);
+
+    block.innerHTML = result.value;
+    block.className = buildClassName(block.className, language, result.language);
+    block.result = {
+      language: result.language,
+      re: result.relevance
+    };
+    if (result.second_best) {
+      block.second_best = {
+        language: result.second_best.language,
+        re: result.second_best.relevance
+      };
+    }
+  }
+
+  /*
+  Updates highlight.js global options with values passed in the form of an object.
+  */
+  function configure(user_options) {
+    options = inherit(options, user_options);
+  }
+
+  /*
+  Applies highlighting to all <pre><code>..</code></pre> blocks on a page.
+  */
+  function initHighlighting() {
+    if (initHighlighting.called)
+      return;
+    initHighlighting.called = true;
+
+    var blocks = document.querySelectorAll('pre code');
+    ArrayProto.forEach.call(blocks, highlightBlock);
+  }
+
+  /*
+  Attaches highlighting to the page load event.
+  */
+  function initHighlightingOnLoad() {
+    window.addEventListener('DOMContentLoaded', initHighlighting, false);
+    window.addEventListener('load', initHighlighting, false);
+  }
+
+  var PLAINTEXT_LANGUAGE = { disableAutodetect: true };
+
+  function registerLanguage(name, language) {
+    var lang;
+    try { lang = language(hljs); }
+    catch (error) {
+      console.error("Language definition for '{}' could not be registered.".replace("{}", name));
+      // hard or soft error
+      if (!SAFE_MODE) { throw error; } else { console.error(error); }
+      // languages that have serious errors are replaced with essentially a
+      // "plaintext" stand-in so that the code blocks will still get normal
+      // css classes applied to them - and one bad language won't break the
+      // entire highlighter
+      lang = PLAINTEXT_LANGUAGE;
+    }
+    languages[name] = lang;
+    restoreLanguageApi(lang);
+    lang.rawDefinition = language.bind(null,hljs);
+
+    if (lang.aliases) {
+      lang.aliases.forEach(function(alias) {aliases[alias] = name;});
+    }
+  }
+
+  function listLanguages() {
+    return objectKeys(languages);
+  }
+
+  /*
+    intended usage: When one language truly requires another
+
+    Unlike `getLanguage`, this will throw when the requested language
+    is not available.
+  */
+  function requireLanguage(name) {
+    var lang = getLanguage(name);
+    if (lang) { return lang; }
+
+    var err = new Error('The \'{}\' language is required, but not loaded.'.replace('{}',name));
+    throw err;
+  }
+
+  function getLanguage(name) {
+    name = (name || '').toLowerCase();
+    return languages[name] || languages[aliases[name]];
+  }
+
+  function autoDetection(name) {
+    var lang = getLanguage(name);
+    return lang && !lang.disableAutodetect;
+  }
+
+  /* Interface definition */
+
+  hljs.highlight = highlight;
+  hljs.highlightAuto = highlightAuto;
+  hljs.fixMarkup = fixMarkup;
+  hljs.highlightBlock = highlightBlock;
+  hljs.configure = configure;
+  hljs.initHighlighting = initHighlighting;
+  hljs.initHighlightingOnLoad = initHighlightingOnLoad;
+  hljs.registerLanguage = registerLanguage;
+  hljs.listLanguages = listLanguages;
+  hljs.getLanguage = getLanguage;
+  hljs.requireLanguage = requireLanguage;
+  hljs.autoDetection = autoDetection;
+  hljs.inherit = inherit;
+  hljs.debugMode = function() { SAFE_MODE = false; }
+
+  // Common regexps
+  hljs.IDENT_RE = '[a-zA-Z]\\w*';
+  hljs.UNDERSCORE_IDENT_RE = '[a-zA-Z_]\\w*';
+  hljs.NUMBER_RE = '\\b\\d+(\\.\\d+)?';
+  hljs.C_NUMBER_RE = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)'; // 0x..., 0..., decimal, float
+  hljs.BINARY_NUMBER_RE = '\\b(0b[01]+)'; // 0b...
+  hljs.RE_STARTERS_RE = '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~';
+
+  // Common modes
+  hljs.BACKSLASH_ESCAPE = {
+    begin: '\\\\[\\s\\S]', relevance: 0
+  };
+  hljs.APOS_STRING_MODE = {
+    className: 'string',
+    begin: '\'', end: '\'',
+    illegal: '\\n',
+    contains: [hljs.BACKSLASH_ESCAPE]
+  };
+  hljs.QUOTE_STRING_MODE = {
+    className: 'string',
+    begin: '"', end: '"',
+    illegal: '\\n',
+    contains: [hljs.BACKSLASH_ESCAPE]
+  };
+  hljs.PHRASAL_WORDS_MODE = {
+    begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+  };
+  hljs.COMMENT = function (begin, end, inherits) {
+    var mode = hljs.inherit(
+      {
+        className: 'comment',
+        begin: begin, end: end,
+        contains: []
+      },
+      inherits || {}
+    );
+    mode.contains.push(hljs.PHRASAL_WORDS_MODE);
+    mode.contains.push({
+      className: 'doctag',
+      begin: '(?:TODO|FIXME|NOTE|BUG|XXX):',
+      relevance: 0
+    });
+    return mode;
+  };
+  hljs.C_LINE_COMMENT_MODE = hljs.COMMENT('//', '$');
+  hljs.C_BLOCK_COMMENT_MODE = hljs.COMMENT('/\\*', '\\*/');
+  hljs.HASH_COMMENT_MODE = hljs.COMMENT('#', '$');
+  hljs.NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.NUMBER_RE,
+    relevance: 0
+  };
+  hljs.C_NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.C_NUMBER_RE,
+    relevance: 0
+  };
+  hljs.BINARY_NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.BINARY_NUMBER_RE,
+    relevance: 0
+  };
+  hljs.CSS_NUMBER_MODE = {
+    className: 'number',
+    begin: hljs.NUMBER_RE + '(' +
+      '%|em|ex|ch|rem'  +
+      '|vw|vh|vmin|vmax' +
+      '|cm|mm|in|pt|pc|px' +
+      '|deg|grad|rad|turn' +
+      '|s|ms' +
+      '|Hz|kHz' +
+      '|dpi|dpcm|dppx' +
+      ')?',
+    relevance: 0
+  };
+  hljs.REGEXP_MODE = {
+    className: 'regexp',
+    begin: /\//, end: /\/[gimuy]*/,
+    illegal: /\n/,
+    contains: [
+      hljs.BACKSLASH_ESCAPE,
+      {
+        begin: /\[/, end: /\]/,
+        relevance: 0,
+        contains: [hljs.BACKSLASH_ESCAPE]
+      }
+    ]
+  };
+  hljs.TITLE_MODE = {
+    className: 'title',
+    begin: hljs.IDENT_RE,
+    relevance: 0
+  };
+  hljs.UNDERSCORE_TITLE_MODE = {
+    className: 'title',
+    begin: hljs.UNDERSCORE_IDENT_RE,
+    relevance: 0
+  };
+  hljs.METHOD_GUARD = {
+    // excludes method names from keyword processing
+    begin: '\\.\\s*' + hljs.UNDERSCORE_IDENT_RE,
+    relevance: 0
+  };
+
+  var constants = [
+    hljs.BACKSLASH_ESCAPE,
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE,
+    hljs.PHRASAL_WORDS_MODE,
+    hljs.COMMENT,
+    hljs.C_LINE_COMMENT_MODE,
+    hljs.C_BLOCK_COMMENT_MODE,
+    hljs.HASH_COMMENT_MODE,
+    hljs.NUMBER_MODE,
+    hljs.C_NUMBER_MODE,
+    hljs.BINARY_NUMBER_MODE,
+    hljs.CSS_NUMBER_MODE,
+    hljs.REGEXP_MODE,
+    hljs.TITLE_MODE,
+    hljs.UNDERSCORE_TITLE_MODE,
+    hljs.METHOD_GUARD
+  ]
+  constants.forEach(function(obj) { deepFreeze(obj); });
+
+  // https://github.com/substack/deep-freeze/blob/master/index.js
+  function deepFreeze (o) {
+    Object.freeze(o);
+
+    var objIsFunction = typeof o === 'function';
+
+    Object.getOwnPropertyNames(o).forEach(function (prop) {
+      if (o.hasOwnProperty(prop)
+      && o[prop] !== null
+      && (typeof o[prop] === "object" || typeof o[prop] === "function")
+      // IE11 fix: https://github.com/highlightjs/highlight.js/issues/2318
+      // TODO: remove in the future
+      && (objIsFunction ? prop !== 'caller' && prop !== 'callee' && prop !== 'arguments' : true)
+      && !Object.isFrozen(o[prop])) {
+        deepFreeze(o[prop]);
+      }
+    });
+
+    return o;
+  };
+
+
+  return hljs;
+}));
+
+</script>
+<script>
+  
+hljs.registerLanguage('xml', /*
+Language: HTML, XML
+Website: https://www.w3.org/XML/
+Category: common
+*/
+
+function(hljs) {
+  var XML_IDENT_RE = '[A-Za-z0-9\\._:-]+';
+  var XML_ENTITIES = {
+    className: 'symbol',
+    begin: '&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;'
+  };
+  var XML_META_KEYWORDS = {
+	  begin: '\\s',
+	  contains:[
+	    {
+	      className: 'meta-keyword',
+	      begin: '#?[a-z_][a-z1-9_-]+',
+	      illegal: '\\n',
+      }
+	  ]
+  };
+  var XML_META_PAR_KEYWORDS = hljs.inherit(XML_META_KEYWORDS, {begin: '\\(', end: '\\)'});
+  var APOS_META_STRING_MODE = hljs.inherit(hljs.APOS_STRING_MODE, {className: 'meta-string'});
+  var QUOTE_META_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, {className: 'meta-string'});
+  var TAG_INTERNALS = {
+    endsWithParent: true,
+    illegal: /</,
+    relevance: 0,
+    contains: [
+      {
+        className: 'attr',
+        begin: XML_IDENT_RE,
+        relevance: 0
+      },
+      {
+        begin: /=\s*/,
+        relevance: 0,
+        contains: [
+          {
+            className: 'string',
+            endsParent: true,
+            variants: [
+              {begin: /"/, end: /"/, contains: [XML_ENTITIES]},
+              {begin: /'/, end: /'/, contains: [XML_ENTITIES]},
+              {begin: /[^\s"'=<>`]+/}
+            ]
+          }
+        ]
+      }
+    ]
+  };
+  return {
+    aliases: ['html', 'xhtml', 'rss', 'atom', 'xjb', 'xsd', 'xsl', 'plist', 'wsf', 'svg'],
+    case_insensitive: true,
+    contains: [
+      {
+        className: 'meta',
+        begin: '<![a-z]', end: '>',
+        relevance: 10,
+        contains: [
+				  XML_META_KEYWORDS,
+				  QUOTE_META_STRING_MODE,
+				  APOS_META_STRING_MODE,
+					XML_META_PAR_KEYWORDS,
+					{
+					  begin: '\\[', end: '\\]',
+					  contains:[
+						  {
+					      className: 'meta',
+					      begin: '<![a-z]', end: '>',
+					      contains: [
+					        XML_META_KEYWORDS,
+					        XML_META_PAR_KEYWORDS,
+					        QUOTE_META_STRING_MODE,
+					        APOS_META_STRING_MODE
+						    ]
+			        }
+					  ]
+				  }
+				]
+      },
+      hljs.COMMENT(
+        '<!--',
+        '-->',
+        {
+          relevance: 10
+        }
+      ),
+      {
+        begin: '<\\!\\[CDATA\\[', end: '\\]\\]>',
+        relevance: 10
+      },
+      XML_ENTITIES,
+      {
+        className: 'meta',
+        begin: /<\?xml/, end: /\?>/, relevance: 10
+      },
+      {
+        begin: /<\?(php)?/, end: /\?>/,
+        subLanguage: 'php',
+        contains: [
+          // We don't want the php closing tag ?> to close the PHP block when
+          // inside any of the following blocks:
+          {begin: '/\\*', end: '\\*/', skip: true},
+          {begin: 'b"', end: '"', skip: true},
+          {begin: 'b\'', end: '\'', skip: true},
+          hljs.inherit(hljs.APOS_STRING_MODE, {illegal: null, className: null, contains: null, skip: true}),
+          hljs.inherit(hljs.QUOTE_STRING_MODE, {illegal: null, className: null, contains: null, skip: true})
+        ]
+      },
+      {
+        className: 'tag',
+        /*
+        The lookahead pattern (?=...) ensures that 'begin' only matches
+        '<style' as a single word, followed by a whitespace or an
+        ending braket. The '$' is needed for the lexeme to be recognized
+        by hljs.subMode() that tests lexemes outside the stream.
+        */
+        begin: '<style(?=\\s|>)', end: '>',
+        keywords: {name: 'style'},
+        contains: [TAG_INTERNALS],
+        starts: {
+          end: '</style>', returnEnd: true,
+          subLanguage: ['css', 'xml']
+        }
+      },
+      {
+        className: 'tag',
+        // See the comment in the <style tag about the lookahead pattern
+        begin: '<script(?=\\s|>)', end: '>',
+        keywords: {name: 'script'},
+        contains: [TAG_INTERNALS],
+        starts: {
+          end: '\<\/script\>', returnEnd: true,
+          subLanguage: ['actionscript', 'javascript', 'handlebars', 'xml']
+        }
+      },
+      {
+        className: 'tag',
+        begin: '</?', end: '/?>',
+        contains: [
+          {
+            className: 'name', begin: /[^\/><\s]+/, relevance: 0
+          },
+          TAG_INTERNALS
+        ]
+      }
+    ]
+  };
+}
+);
+
+hljs.registerLanguage('markdown', /*
+Language: Markdown
+Requires: xml.js
+Author: John Crepezzi <john.crepezzi@gmail.com>
+Website: https://daringfireball.net/projects/markdown/
+Category: common, markup
+*/
+
+function(hljs) {
+  return {
+    aliases: ['md', 'mkdown', 'mkd'],
+    contains: [
+      // highlight headers
+      {
+        className: 'section',
+        variants: [
+          { begin: '^#{1,6}[ \\t]+', end: '$' },
+          { begin: '^.+?\\n[=-]{2,}$' }
+        ]
+      },
+      // inline html
+      {
+        begin: /<\/?[A-Za-z_]/, end: '>',
+        subLanguage: 'xml',
+        relevance: 0
+      },
+      // lists (indicators only), tasks: (- \\[[xX ]\\])
+      {
+        className: 'bullet',
+        begin: '^\\s*((- \\[[xX ]\\])|[*+-]|(\\d+\\.))[ \\t]+'
+      },
+      // strong + emphasis (_**word**_, __*word*__, ___word___, *__word__*, **_word_**, ***word***)
+      {
+        className: 'bold-italic',
+        variants: [
+          { begin: '_\\*\\*.+?\\*\\*_' },
+          { begin: '__\\*.+?\\*__' },
+          { begin: '___.+?___' },
+          { begin: '\\*__.+?__\\*' },
+          { begin: '\\*\\*_.+?_\\*\\*' },
+          { begin: '\\*\\*\\*.+?\\*\\*\\*' },
+        ]
+      },
+      // strong segments
+      {
+        className: 'strong',
+        begin: '[*_]{2}.*?[*_]{2}'
+      },
+      // emphasis segments
+      {
+        className: 'emphasis',
+        variants: [
+          { begin: '\\*.+?\\*' },
+          { begin: '_.+?_', relevance: 0 }
+        ]
+      },
+      // blockquotes
+      {
+        className: 'quote',
+        begin: '^>[ \\t]+', end: '$'
+      },
+      // code snippets
+      {
+        className: 'code',
+        variants: [
+          {
+            begin: '^```.*\\s*$', end: '^```[ ]*$'
+          },
+          {
+            begin: '`.+?`'
+          },
+          {
+            begin: '^( {4}|\\t)', end: '$',
+            relevance: 0
+          },
+          {
+            // https://plantuml.com/
+            begin: '^@startuml$', end: '^@enduml$'
+          },
+          // {
+          //   // use monospaced fonts for tables
+          //   begin: '^(\\|[^\n]+\\|\r?\n)((?:\\| *:?[-]+:? *)+\\|)', end: '(\n(?:\\|[^\n]+\\|\r?\n?)*)?$'
+          // },
+          { begin: '\\$\\$', end: '\\$\\$' }
+        ]
+      },
+      // horizontal rules
+      {
+        begin: '^[-\\*]{3,}', end: '$'
+      },
+      // wikilinks, E.g. [[Notes]]
+      {
+        begin: '\\[\\[.+?\\]\\]',
+        returnBegin: true,
+        contains: [
+          {
+            className: 'link',
+            begin: '\\[\\[', end: '\\]\\]',
+            excludeBegin: true, excludeEnd: true
+          }
+        ]
+      },
+      // using links - title and link
+      {
+        begin: '\\[.*?\\][\\(\\[].*?[\\)\\]]',
+        returnBegin: true,
+        contains: [
+          {
+            className: 'string',
+            begin: '\\[', end: '\\]',
+            excludeBegin: true,
+            returnEnd: true,
+            relevance: 0
+          },
+          {
+            className: 'link',
+            begin: '\\]\\(', end: '\\)',
+            excludeBegin: true, excludeEnd: true
+          },
+          {
+            className: 'symbol',
+            begin: '\\]\\[', end: '\\]',
+            excludeBegin: true, excludeEnd: true
+          }
+        ],
+        relevance: 10
+      },
+      {
+        begin: /^\[[^\n]+\]:/,
+        returnBegin: true,
+        contains: [
+          {
+            className: 'symbol',
+            begin: /\[/, end: /\]/,
+            excludeBegin: true, excludeEnd: true
+          },
+          {
+            className: 'link',
+            begin: /:\s*/, end: /$/,
+            excludeBegin: true
+          }
+        ]
+      },
+      // footnote, E.g. [^footnote]
+      {
+        begin: '\\[\\^.*\\]',
+        returnBegin: true,
+        contains: [
+          {
+            className: 'string',
+            begin: '\\[', end: '\\]',
+            excludeBegin: true, excludeEnd: true
+          }
+        ]
+      },
+      // highlighters
+      {
+        className: 'highlighter',
+        begin: '==.+?=='
+      },
+      // hashtags
+      {
+        className: 'hashtag',
+        // no \' to prevent markedText interruption
+        begin: '(^|\\s)#[^!$%^&*()+|~=`{}\\[\\]:"<>?#@\\\\\\s;,.\uff1b\uff0c\u3002\ufe0f]+(?=\\s|;|,|\\.|\uff1b|\uff0c|\u3002|\ufe0f|$)'
+      }
+    ]
+  };
+}
+);
+
+hljs.registerLanguage('tex', /*
+Language: TeX
+Author: Vladimir Moskva <vladmos@gmail.com>
+Website: https://www.latex-project.org
+Category: markup
+*/
+
+function(hljs) {
+  var COMMAND = {
+    className: 'tag',
+    begin: /\\/,
+    relevance: 0,
+    contains: [
+      {
+        className: 'name',
+        variants: [
+          {begin: /[a-zA-Z\u0430-\u044f\u0410-\u042f]+[*]?/},
+          {begin: /[^a-zA-Z\u0430-\u044f\u0410-\u042f0-9]/}
+        ],
+        starts: {
+          endsWithParent: true,
+          relevance: 0,
+          contains: [
+            {
+              className: 'string', // because it looks like attributes in HTML tags
+              variants: [
+                {begin: /\[/, end: /\]/},
+                {begin: /\{/, end: /\}/}
+              ]
+            },
+            {
+              begin: /\s*=\s*/, endsWithParent: true,
+              relevance: 0,
+              contains: [
+                {
+                  className: 'number',
+                  begin: /-?\d*\.?\d+(pt|pc|mm|cm|in|dd|cc|ex|em)?/
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  };
+
+  return {
+    contains: [
+      COMMAND,
+      {
+        className: 'formula',
+        contains: [COMMAND],
+        relevance: 0,
+        variants: [
+          {begin: /\$\$/, end: /\$\$/},
+          {begin: /\$/, end: /\$/}
+        ]
+      },
+      hljs.COMMENT(
+        '%',
+        '$',
+        {
+          relevance: 0
+        }
+      )
+    ]
+  };
+}
+);
+
+hljs.registerLanguage('plaintext', /*
+Language: plaintext
+Author: Egor Rogov (e.rogov@postgrespro.ru)
+Description: Plain text without any highlighting.
+Category: common
+*/
+
+function(hljs) {
+    return {
+        disableAutodetect: true
+    };
+}
+);
+
+hljs.registerLanguage('css', /*
+Language: CSS
+Category: common, css
+Website: https://developer.mozilla.org/en-US/docs/Web/CSS
+*/
+
+function(hljs) {
+  var FUNCTION_LIKE = {
+    begin: /[\w-]+\(/, returnBegin: true,
+    contains: [
+      {
+        className: 'built_in',
+        begin: /[\w-]+/
+      },
+      {
+        begin: /\(/, end: /\)/,
+        contains: [
+          hljs.APOS_STRING_MODE,
+          hljs.QUOTE_STRING_MODE,
+          hljs.CSS_NUMBER_MODE,
+        ]
+      }
+    ]
+  }
+  var ATTRIBUTE = {
+    className: 'attribute',
+    begin: /\S/, end: ':', excludeEnd: true,
+    starts: {
+      endsWithParent: true, excludeEnd: true,
+      contains: [
+        FUNCTION_LIKE,
+        hljs.CSS_NUMBER_MODE,
+        hljs.QUOTE_STRING_MODE,
+        hljs.APOS_STRING_MODE,
+        hljs.C_BLOCK_COMMENT_MODE,
+        {
+          className: 'number', begin: '#[0-9A-Fa-f]+'
+        },
+        {
+          className: 'meta', begin: '!important'
+        }
+      ]
+    }
+  }
+  var AT_IDENTIFIER = '@[a-z-]+' // @font-face
+  var AT_MODIFIERS = "and or not only"
+  var MEDIA_TYPES = "all print screen speech"
+  var AT_PROPERTY_RE = /@\-?\w[\w]*(\-\w+)*/ // @-webkit-keyframes
+  var IDENT_RE = '[a-zA-Z-][a-zA-Z0-9_-]*';
+  var RULE = {
+    begin: /(?:[A-Z\_\.\-]+|--[a-zA-Z0-9_-]+)\s*:/, returnBegin: true, end: ';', endsWithParent: true,
+    contains: [
+      ATTRIBUTE
+    ]
+  };
+
+  return {
+    case_insensitive: true,
+    illegal: /[=\/|'\$]/,
+    contains: [
+      hljs.C_BLOCK_COMMENT_MODE,
+      {
+        className: 'selector-id', begin: /#[A-Za-z0-9_-]+/
+      },
+      {
+        className: 'selector-class', begin: /\.[A-Za-z0-9_-]+/
+      },
+      {
+        className: 'selector-attr',
+        begin: /\[/, end: /\]?/, // ? to work around endless loop
+        illegal: '$',
+        contains: [
+          hljs.APOS_STRING_MODE,
+          hljs.QUOTE_STRING_MODE,
+        ]
+      },
+      {
+        className: 'selector-pseudo',
+        begin: /:(:)?[a-zA-Z0-9\_\-\+\(\)"'.]+/
+      },
+      // matching these here allows us to treat them more like regular CSS
+      // rules so everything between the {} gets regular rule highlighting,
+      // which is what we want for page and font-face
+      {
+        begin: '@(page|font-face)',
+        lexemes: AT_IDENTIFIER,
+        keywords: '@page @font-face'
+      },
+      {
+        begin: '@', end: '[{;]', // at_rule eating first "{" is a good thing
+                                 // because it doesn’t let it to be parsed as
+                                 // a rule set but instead drops parser into
+                                 // the default mode which is how it should be.
+        illegal: /:/, // break on Less variables @var: ...
+        returnBegin: true,
+        contains: [
+          {
+            className: 'keyword',
+            begin: AT_PROPERTY_RE
+          },
+          {
+            begin: /\s/, endsWithParent: true, excludeEnd: true,
+            relevance: 0,
+            keywords: AT_MODIFIERS,
+            contains: [
+              {
+                begin: /[a-z-]+:/,
+                className:"attribute"
+              },
+              hljs.APOS_STRING_MODE,
+              hljs.QUOTE_STRING_MODE,
+              hljs.CSS_NUMBER_MODE
+            ]
+          }
+        ]
+      },
+      {
+        className: 'selector-tag', begin: IDENT_RE,
+        relevance: 0
+      },
+      {
+        begin: '{', end: '}',
+        illegal: /\S/,
+        contains: [
+          hljs.C_BLOCK_COMMENT_MODE,
+          RULE,
+        ]
+      }
+    ]
+  };
+}
+);
+
+hljs.registerLanguage('json', /*
+Language: JSON / JSON with Comments
+Description: JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+Author: Ivan Sagalaev <maniac@softwaremaniacs.org>
+Website: http://www.json.org
+Category: common, protocols
+*/
+
+function(hljs) {
+  var LITERALS = {literal: 'true false null'};
+  var ALLOWED_COMMENTS = [
+    hljs.C_LINE_COMMENT_MODE,
+    hljs.C_BLOCK_COMMENT_MODE
+  ]
+  var TYPES = [
+    hljs.QUOTE_STRING_MODE,
+    hljs.C_NUMBER_MODE
+  ];
+  var VALUE_CONTAINER = {
+    end: ',', endsWithParent: true, excludeEnd: true,
+    contains: TYPES,
+    keywords: LITERALS
+  };
+  var OBJECT = {
+    begin: '{', end: '}',
+    contains: [
+      {
+        className: 'attr',
+        begin: /"/, end: /"/,
+        contains: [hljs.BACKSLASH_ESCAPE],
+        illegal: '\\n',
+      },
+      hljs.inherit(VALUE_CONTAINER, {begin: /:/})
+    ].concat(ALLOWED_COMMENTS),
+    illegal: '\\S'
+  };
+  var ARRAY = {
+    begin: '\\[', end: '\\]',
+    contains: [hljs.inherit(VALUE_CONTAINER)], // inherit is a workaround for a bug that makes shared modes with endsWithParent compile only the ending of one of the parents
+    illegal: '\\S'
+  };
+  TYPES.push(OBJECT, ARRAY);
+  ALLOWED_COMMENTS.forEach(function(rule) {
+    TYPES.push(rule)
+  })
+  return {
+    contains: TYPES,
+    keywords: LITERALS,
+    illegal: '\\S'
+  };
+}
+);
+
+hljs.registerLanguage('javascript', /*
+Language: JavaScript
+Description: JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
+Category: common, scripting
+Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+*/
+
+function(hljs) {
+  var IDENT_RE = '[A-Za-z$_][0-9A-Za-z$_]*';
+  var KEYWORDS = {
+    keyword:
+      'in of if for while finally var new function do return void else break catch ' +
+      'instanceof with throw case default try this switch continue typeof delete ' +
+      'let yield const export super debugger as async await static ' +
+      // ECMAScript 6 modules import
+      'import from as'
+    ,
+    literal:
+      'true false null undefined NaN Infinity',
+    built_in:
+      // jsbox: begin
+      'JSBox ' +
+      'exports setTimeout setInterval clearInterval alert ' +
+      '$device $app $context $ui $clipboard $http $file $photo $audio $cache $keychain $thread $share $push $location $system $message $calendar $reminder $contact $motion $input $text $picker $qrcode $pdf $detector $quicklook $drive $safari $archiver $timer $console $addin $browser $keyboard $network $ssh $widget $sqlite $socket $server $intents $xml $editor $prefs $nodejs $jsbox $imagekit $actions btoa atob $include $l10n $delay $wait $rect $size $point $insets $color $rgb $rgba $font $range $indexPath $transform $image $data $icon $labeledValue $accessibilityAction $props $defc $block $delegate $objc $objc_retain $objc_release $objc_clean $define_struct $struct $get_protocol $define $protocol $env $align $cellInset $contentMode $btnType $zero $layout $lineCap $lineJoin $mediaType $imgPicker $kbType $assetMedia $pageSize $UIEvent $stackViewAxis $stackViewDistribution $stackViewAlignment $stackViewSpacing $collect_garbage ' +
+      'NSDictionary NSMutableDictionary NSArray NSMutableArray NSSet NSMutableSet NSString NSMutableString NSData NSMutableData NSNumber NSURL NSEnumerator ' +
+      'ObjCProxy ObjCDefineClass ObjCDefineProtocol ObjCDefineCFunc ObjCDefineStruct ObjCGetProtocol ObjCBlock ObjCDelegate ObjCRetain ObjCRelease ObjCClean ' +
+      // jsbox: end
+      'eval isFinite isNaN parseFloat parseInt decodeURI decodeURIComponent ' +
+      'encodeURI encodeURIComponent escape unescape Object Function Boolean Error ' +
+      'EvalError InternalError RangeError ReferenceError StopIteration SyntaxError ' +
+      'TypeError URIError Number Math Date String RegExp Array Float32Array ' +
+      'Float64Array Int16Array Int32Array Int8Array Uint16Array Uint32Array ' +
+      'Uint8Array Uint8ClampedArray ArrayBuffer DataView JSON Intl arguments require ' +
+      'module console window document Symbol Set Map WeakSet WeakMap Proxy Reflect ' +
+      'Promise'
+  };
+  var NUMBER = {
+    className: 'number',
+    variants: [
+      { begin: '\\b(0[bB][01]+)n?' },
+      { begin: '\\b(0[oO][0-7]+)n?' },
+      { begin: hljs.C_NUMBER_RE + 'n?' }
+    ],
+    relevance: 0
+  };
+  var SUBST = {
+    className: 'subst',
+    begin: '\\$\\{', end: '\\}',
+    keywords: KEYWORDS,
+    contains: []  // defined later
+  };
+  var HTML_TEMPLATE = {
+    begin: 'html`', end: '',
+    starts: {
+      end: '`', returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: 'xml',
+    }
+  };
+  var CSS_TEMPLATE = {
+    begin: 'css`', end: '',
+    starts: {
+      end: '`', returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: 'css',
+    }
+  };
+  var TEMPLATE_STRING = {
+    className: 'string',
+    begin: '`', end: '`',
+    contains: [
+      hljs.BACKSLASH_ESCAPE,
+      SUBST
+    ]
+  };
+  SUBST.contains = [
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE,
+    HTML_TEMPLATE,
+    CSS_TEMPLATE,
+    TEMPLATE_STRING,
+    NUMBER,
+    hljs.REGEXP_MODE
+  ];
+  var PARAMS_CONTAINS = SUBST.contains.concat([
+    hljs.C_BLOCK_COMMENT_MODE,
+    hljs.C_LINE_COMMENT_MODE
+  ]);
+
+  return {
+    aliases: ['js', 'jsx', 'mjs', 'cjs'],
+    keywords: KEYWORDS,
+    contains: [
+      {
+        className: 'meta',
+        relevance: 10,
+        begin: /^\s*['"]use (strict|asm)['"]/
+      },
+      {
+        className: 'meta',
+        begin: /^#!/, end: /$/
+      },
+      hljs.APOS_STRING_MODE,
+      hljs.QUOTE_STRING_MODE,
+      HTML_TEMPLATE,
+      CSS_TEMPLATE,
+      TEMPLATE_STRING,
+      hljs.C_LINE_COMMENT_MODE,
+      hljs.COMMENT(
+        '/\\*\\*',
+        '\\*/',
+        {
+          relevance : 0,
+          contains : [
+            {
+              className : 'doctag',
+              begin : '@[A-Za-z]+',
+              contains : [
+                {
+                  className: 'type',
+                  begin: '\\{',
+                  end: '\\}',
+                  relevance: 0
+                },
+                {
+                  className: 'variable',
+                  begin: IDENT_RE + '(?=\\s*(-)|$)',
+                  endsParent: true,
+                  relevance: 0
+                },
+                // eat spaces (not newlines) so we can find
+                // types or variables
+                {
+                  begin: /(?=[^\n])\s/,
+                  relevance: 0
+                },
+              ]
+            }
+          ]
+        }
+      ),
+      hljs.C_BLOCK_COMMENT_MODE,
+      NUMBER,
+      { // object attr container
+        begin: /[{,\n]\s*/, relevance: 0,
+        contains: [
+          {
+            begin: IDENT_RE + '\\s*:', returnBegin: true,
+            relevance: 0,
+            contains: [{className: 'attr', begin: IDENT_RE, relevance: 0}]
+          }
+        ]
+      },
+      { // "value" container
+        begin: '(' + hljs.RE_STARTERS_RE + '|\\b(case|return|throw)\\b)\\s*',
+        keywords: 'return throw case',
+        contains: [
+          hljs.C_LINE_COMMENT_MODE,
+          hljs.C_BLOCK_COMMENT_MODE,
+          hljs.REGEXP_MODE,
+          {
+            className: 'function',
+            begin: '(\\(.*?\\)|' + IDENT_RE + ')\\s*=>', returnBegin: true,
+            end: '\\s*=>',
+            contains: [
+              {
+                className: 'params',
+                variants: [
+                  {
+                    begin: IDENT_RE
+                  },
+                  {
+                    begin: /\(\s*\)/,
+                  },
+                  {
+                    begin: /\(/, end: /\)/,
+                    excludeBegin: true, excludeEnd: true,
+                    keywords: KEYWORDS,
+                    contains: PARAMS_CONTAINS
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            className: '',
+            begin: /\s/,
+            end: /\s*/,
+            skip: true,
+          },
+          { // E4X / JSX
+            begin: /</, end: /(\/[A-Za-z0-9\\._:-]+|[A-Za-z0-9\\._:-]+\/)>/,
+            subLanguage: 'xml',
+            contains: [
+              { begin: /<[A-Za-z0-9\\._:-]+\s*\/>/, skip: true },
+              {
+                begin: /<[A-Za-z0-9\\._:-]+/, end: /(\/[A-Za-z0-9\\._:-]+|[A-Za-z0-9\\._:-]+\/)>/, skip: true,
+                contains: [
+                  { begin: /<[A-Za-z0-9\\._:-]+\s*\/>/, skip: true },
+                  'self'
+                ]
+              }
+            ]
+          }
+        ],
+        relevance: 0
+      },
+      {
+        className: 'function',
+        beginKeywords: 'function', end: /\{/, excludeEnd: true,
+        contains: [
+          hljs.inherit(hljs.TITLE_MODE, {begin: IDENT_RE}),
+          {
+            className: 'params',
+            begin: /\(/, end: /\)/,
+            excludeBegin: true,
+            excludeEnd: true,
+            contains: PARAMS_CONTAINS
+          }
+        ],
+        illegal: /\[|%/
+      },
+      {
+        begin: /\$[(.]/ // relevance booster for a pattern common to JS libs: `$(something)` and `$.something`
+      },
+      hljs.METHOD_GUARD,
+      { // ES6 class
+        className: 'class',
+        beginKeywords: 'class', end: /[{;=]/, excludeEnd: true,
+        illegal: /[:"\[\]]/,
+        contains: [
+          {beginKeywords: 'extends'},
+          hljs.UNDERSCORE_TITLE_MODE
+        ]
+      },
+      {
+        beginKeywords: 'constructor get set', end: /\{/, excludeEnd: true
+      }
+    ],
+    illegal: /#(?!!)/
+  };
+}
+);
+
+  if (false) {
+    hljs.initHighlightingOnLoad();
+  } else {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("pre code").forEach(block => {
+        if (block.className.indexOf("language-") === -1) {
+          block.classList.add("language-plaintext");
+        }
+        hljs.highlightBlock(block);
+      });
+    });
+  }
+</script>
+  <script>
+    if (true) {
+      MathJax = {
+        loader: { load: ["[tex]/upgreek"] },
+        showProcessingMessages: false,
+        tex: {
+          packages: { "[+]": ["upgreek"] },
+          autoload: {
+            upgreek: [
+              'upalpha', 'upbeta', 'upchi', 'updelta', 'Updelta', 'upepsilon',
+              'upeta', 'upgamma', 'Upgamma', 'upiota', 'upkappa', 'uplambda',
+              'Uplambda', 'upmu', 'upnu', 'upomega', 'Upomega', 'upomicron',
+              'upphi', 'Upphi', 'uppi', 'Uppi', 'uppsi', 'Uppsi', 'uprho',
+              'upsigma', 'Upsigma', 'uptau', 'uptheta', 'Uptheta', 'upupsilon',
+              'Upupsilon', 'upvarepsilon', 'upvarphi', 'upvarpi', 'upvarrho',
+              'upvarsigma', 'upvartheta', 'upxi', 'Upxi', 'upzeta',
+            ]
+          },
+          inlineMath: [],
+          processEscapes: true
+        },
+        tex2jax: {
+          inlineMath: [],
+          processEscapes: true
+        },
+        svg: {
+          fontCache: "global"
+        }
+      };
+
+      const script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-mml-chtml.min.js";
+      script.defer = true;
+      const anchor = document.getElementsByTagName("script")[0];
+      anchor.parentNode.insertBefore(script, anchor);
+    }
+  </script>
+</head>
+<body>
+  <article class="markdown-body"><html lang="en-US" dir="ltr" theme="dark">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=99%, initial-scale=1">
+<head>
+	<title>Send Anonymous Email - candymail.org</title>
+	<style type="text/css" media="screen"/>/*
+Theme Name: VCard
+Theme URI: http://siteorigin.com/theme/vcard/
+Author: SiteOrigin
+Author URI: http://siteorigin.com/
+Version: 10.0.4
+License: GPL 3.0
+License URI: http://www.gnu.org/copyleft/gpl.html
+Description: vCard is the perfect theme for your personal online presence. It gives you simple blog and portfolio functionality as well as some shortcodes you can use to create a professional online resume.
+Tags: light, yellow, one-column, fixed-width, custom-background, custom-header, custom-menu, editor-style, featured-images
+*/
+<p>/* =Reset
+-------------------------------------------------------------- */</p>
+<p>html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+border: 0;
+font: inherit;
+font-size: 11px;
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+}</p>
+<p>/* HTML5 display-role reset for older browsers */</p>
+<p>article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+display: block;
+}</p>
+<p>body {
+line-height: 1;
+}</p>
+<p>ol,
+ul {
+list-style: none;
+}</p>
+<p>blockquote,
+q {
+quotes: none;
+}</p>
+<p>blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+content: '';
+content: none;
+}</p>
+<p>table {
+border-collapse: collapse;
+border-spacing: 0;
+}</p>
+<p>/* =General
+-------------------------------------------------------------- */</p>
+<p>body {
+font: 13px Verdana, sans-serif;
+}</p>
+<p>.container {
+width: 860px;</p>
+<pre><code>margin: 0 auto;
+</code></pre>
+<p>}</p>
+<p>.clear {
+clear: both;
+}</p>
+<p>a {
+color: <a href="taio://editor?action=open&tag=2793b5">#2793b5</a>;
+}</p>
+<p>/* =Page
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=page">#page</a> {
+position: relative;</p>
+<pre><code>background: &lt;a href=&quot;taio://editor?action=open&amp;tag=f9f9f9&quot;&gt;#f9f9f9&lt;/a&gt; url(images/page-bg.png) repeat;
+border: 1px solid &lt;a href=&quot;taio://editor?action=open&amp;tag=FFF&quot;&gt;#FFF&lt;/a&gt;;
+border-width: 1px 0;
+box-shadow: 0 2px 2px RGBA(0,0,0,0.1);
+margin: 100px 0 18px 0;
+padding: 30px;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=page-decoration">#page-decoration</a> {
+position: absolute;
+top: -60px;
+left: 0;
+width: 100%;
+height: 20px;</p>
+<pre><code>background: RGBA(0,0,0,0.01);
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=page-shadow">#page-shadow</a> {
+position: absolute;
+bottom: -25px;
+left: 0;
+width: 100%;
+height: 24px;</p>
+<pre><code>background: url(images/page-shadow.png) no-repeat center center;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=page-top">#page-top</a> {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 16px;</p>
+<pre><code>background: url(images/page-top.png) repeat-x;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=page-bottom">#page-bottom</a> {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 10px;</p>
+<pre><code>background: url(images/page-bottom.png) repeat-x;
+</code></pre>
+<p>}</p>
+<p>/* =Main Menu
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> {
+position: absolute;
+top: 30px;
+left: -51px;
+width: 144px;</p>
+<pre><code>font-family: Verdana, sans-serif;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li {
+position: relative;
+width: 144px;
+height: 41px;</p>
+<pre><code>background: url(images/sprites/tab-inactive.png) no-repeat;
+display: block;
+font-weight: bold;
+overflow: hidden;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li a {
+color: <a href="taio://editor?action=open&tag=d4d4d4">#d4d4d4</a>;
+display: block;
+font-size: 10px;
+padding: 16px 0 15px 60px;
+text-decoration: none;
+text-shadow: 0 0 2px rgba(0,0,0,0.02);
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.current-menu-item {
+background: url(images/sprites/tab-active.png) no-repeat;
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.current-menu-item a {
+color: <a href="taio://editor?action=open&tag=505259">#505259</a>;
+text-shadow: none;
+}</p>
+<p>/* =Main Menu  : Icons
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li em {
+position: absolute;
+top: 14px;
+left: 18px;
+width: 16px;
+height: 16px;</p>
+<pre><code>background-image: url(images/icons/document.png);
+background-repeat: no-repeat;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.page-home-php em {
+background-image: url(images/icons/home.png);
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.page-resume-php em {
+background-image: url(images/icons/resume.png);
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.page-portfolio-php em {
+background-image: url(images/icons/work.png);
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.page-contact-php em {
+background-image: url(images/icons/contact.png);
+}</p>
+<p><a href="taio://editor?action=open&tag=main-menu">#main-menu</a> li.page-blog-php em {
+background-image: url(images/icons/blog.png);
+}</p>
+<p>/* =Site Info
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> {
+margin-bottom: 40px;
+}</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> a {
+text-decoration: none;
+}</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> img {
+box-shadow: 0 2px 3px RGBA(0,0,0,0.15);
+float: left;
+}</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> .text {
+margin-left: 160px;
+}</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> h1 {
+color: <a href="taio://editor?action=open&tag=494644">#494644</a>;
+font-family: 'Ubuntu', sans-serif;
+font-size: 50px;
+margin-bottom: 10px;
+padding-top: 30px;
+}</p>
+<p><a href="taio://editor?action=open&tag=site-info">#site-info</a> h2 {
+color: <a href="taio://editor?action=open&tag=7a7674">#7a7674</a>;
+font-size: 16px;
+}</p>
+<p>/* =Content
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=content">#content</a> {
+color: <a href="taio://editor?action=open&tag=5f5e5b">#5f5e5b</a>;
+font-size: 12px;
+margin-left: 0px;
+}</p>
+<p>h1.entry-title {
+color: <a href="taio://editor?action=open&tag=484744">#484744</a>;
+font-size: 26px;
+margin-bottom: 20px;
+}</p>
+<p>/* =Content  : Entry Info
+-------------------------------------------------------------- */</p>
+<p>.entry-info {
+margin: -15px 0 25px 0;
+}</p>
+<p>.entry-info a {
+color: <a href="taio://editor?action=open&tag=53524f">#53524f</a>;
+font-weight: bold;
+text-decoration: none;
+}</p>
+<p>/* =Content  : Entry Content
+-------------------------------------------------------------- */</p>
+<p>.entry-content {
+color: <a href="taio://editor?action=open&tag=000000">#000000</a>;
+line-height: 1;
+}</p>
+<p>.entry-content p {
+margin: 5px 0;
+}</p>
+<p>.entry-content *:first-child {
+margin-top: 0;
+}</p>
+<p>.entry-content *:last-child {
+margin-bottom: 0;
+}</p>
+<p>.entry-content strong {
+font-weight: bold;
+}</p>
+<p>.entry-content img {
+height: auto;</p>
+<pre><code>max-width: 100%;
+</code></pre>
+<p>}</p>
+<p>/* =Content  : Entry Content  : Images
+-------------------------------------------------------------- */</p>
+<p>.entry-content img {
+height: auto;</p>
+<pre><code>max-width: 100%;
+</code></pre>
+<p>}</p>
+<p>.entry-content .alignright {
+float: right;
+margin: 0 0 20px 20px;
+}</p>
+<p>.entry-content .alignleft {
+float: left;
+margin: 0 20px 20px 0;
+}</p>
+<p>.entry-content .aligncenter {
+clear: both;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}</p>
+<p>.entry-content .alignleft,
+.entry-content .alignright,
+.entry-content .aligncenter {
+margin-bottom: 1.5em;
+}</p>
+<p>.entry-content .wp-caption {
+background: <a href="taio://editor?action=open&tag=FCFCFC">#FCFCFC</a>;
+box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+margin-bottom: 20px;
+}</p>
+<p>.entry-content .wp-caption a.attachment {
+line-height: 0;
+}</p>
+<p>.entry-content .wp-caption img {
+margin: 5px;
+margin-bottom: 5px;
+}</p>
+<p>.entry-content .wp-caption a {
+line-height: 0;
+}</p>
+<p>.entry-content .wp-caption p.wp-caption-text {
+color: <a href="taio://editor?action=open&tag=999">#999</a>;
+font: italic 12px Georgia, &quot;Times New Roman&quot;, Times, serif;
+margin: 0;
+padding: 5px 5px 10px 5px;
+text-align: center;
+}</p>
+<p>.entry-content .wp-caption p {
+line-height: 1;
+}</p>
+<p>.entry-content .wp-caption p a {
+color: <a href="taio://editor?action=open&tag=333">#333</a>;
+line-height: 1;
+}</p>
+<p>.entry-content .gallery-caption {
+font-size: 11px;
+}</p>
+<p>/* =Content  : Entry Content  : Quotes
+-------------------------------------------------------------- */</p>
+<p>blockquote {
+font-family: Georgia, &quot;Bitstream Charter&quot;, serif;
+font-size: 13px;
+font-style: italic;
+font-weight: normal;
+margin: 0 3em;
+}</p>
+<p>blockquote em,
+blockquote i,
+blockquote cite {
+font-style: normal;
+}</p>
+<p>blockquote cite {
+color: <a href="taio://editor?action=open&tag=666">#666</a>;
+font: 12px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+font-weight: bold;
+}</p>
+<p>/* =Content  : Entry Content  : Subscript and Superscript
+-------------------------------------------------------------- */</p>
+<p>sup,
+sub {
+position: relative;
+height: 0;</p>
+<pre><code>font-size: 10px;
+line-height: 1;
+vertical-align: baseline;
+</code></pre>
+<p>}</p>
+<p>sup {
+bottom: 1ex;</p>
+<p>}</p>
+<p>sub {
+top: .5ex;</p>
+<p>}</p>
+<p>/* =Content  : Entry Content  : Definition lists
+-------------------------------------------------------------- */</p>
+<p>.entry-content dl {
+margin: 0 1.625em;
+}</p>
+<p>.entry-content dt {
+font-weight: bold;
+}</p>
+<p>.entry-content dd {
+margin-bottom: 1.625em;
+}</p>
+<p>/* =Content  : Entry Content  : Table
+-------------------------------------------------------------- */</p>
+<p>.entry-content table {
+width: 100%;</p>
+<pre><code>border-bottom: 1px solid &lt;a href=&quot;taio://editor?action=open&amp;tag=ddd&quot;&gt;#ddd&lt;/a&gt;;
+margin: 0 0 1.625em;
+</code></pre>
+<p>}</p>
+<p>.entry-content th {
+color: <a href="taio://editor?action=open&tag=666">#666</a>;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 0.1em;
+line-height: 2.6em;
+text-transform: uppercase;
+}</p>
+<p>.entry-content td {
+border-top: 1px solid <a href="taio://editor?action=open&tag=ddd">#ddd</a>;
+padding: 6px 10px 6px 0;
+}</p>
+<p>/* =Content  : Entry Content  : Lists
+-------------------------------------------------------------- */</p>
+<p>.entry-content ul,
+.entry-content ol {
+line-height: 1.9em;
+margin: 1.5em 0;
+padding-left: 1.65em;
+}</p>
+<p>.entry-content ul {
+list-style-type: disc;
+}</p>
+<p>.entry-content ol {
+}</p>
+<p>.entry-content ul ul,
+.entry-content ol ol,
+.entry-content ul ol,
+.entry-content ol ul {
+margin: 0;
+}</p>
+<p>.entry-content ul,
+ol {
+margin: 0 0 1.625em 2.5em;
+}</p>
+<p>.entry-content ul {
+list-style: square;
+}</p>
+<p>.entry-content ol {
+list-style-type: decimal;
+}</p>
+<p>.entry-content ol ol {
+list-style: upper-alpha;
+}</p>
+<p>.entry-content ol ol ol {
+list-style: lower-roman;
+}</p>
+<p>.entry-content ol ol ol ol {
+list-style: lower-alpha;
+}</p>
+<p>/* =Content  : Entry Content  : Headings
+-------------------------------------------------------------- */</p>
+<p>.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+color: <a href="taio://editor?action=open&tag=484744">#484744</a>;
+margin: 1.5em 0;
+}</p>
+<p>.entry-content h1 {
+font-size: 24px;
+}</p>
+<p>.entry-content h2 {
+font-size: 21px;
+}</p>
+<p>.entry-content h3 {
+font-size: 18px;
+}</p>
+<p>.entry-content h4 {
+font-size: 16px;
+}</p>
+<p>.entry-content h5 {
+font-size: 14px;
+}</p>
+<p>.entry-content h6 {
+font-size: 12px;
+}</p>
+<p>/* =Content  : Entry Content  : Gallery
+-------------------------------------------------------------- */</p>
+<p>.entry-content .gallery .gallery-item {
+margin: 0;
+}</p>
+<p>/* =Content  : Page Templates
+-------------------------------------------------------------- */</p>
+<p>.page-template-page-home-php .post,
+.page-template-page-resume-php .post,
+.page-template-page-contact-php .post {
+margin-left: 160px;
+}</p>
+<p>/* =Footer
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=footer">#footer</a> {
+color: <a href="taio://editor?action=open&tag=000000">#000000</a>;
+font-size: 11px;
+margin: 18px 0 100px 0;
+padding: 0 8px;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer">#footer</a> a {
+color: <a href="taio://editor?action=open&tag=3633ee">#3633ee</a>;
+text-decoration: none;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer">#footer</a> .copyright {
+float: left;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer">#footer</a> .designed {
+float: right;
+}
+}</p>
+<p>/* =Shortcodes
+-------------------------------------------------------------- */</p>
+<p>/* =Shortcodes  : Portfolio Gallery
+-------------------------------------------------------------- */</p>
+<p>.entry-content .portfolio-gallery {
+margin: 0 -10px -20px -10px;
+}</p>
+<p>.entry-content .portfolio-gallery a.entry {
+position: relative;
+width: 220px;
+height: 220px;</p>
+<pre><code>display: block;
+float: left;
+line-height: 0;
+margin: 0 10px;
+margin-bottom: 20px;
+overflow: hidden;
+</code></pre>
+<p>}</p>
+<p>.entry-content .portfolio-gallery .entry .title {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;</p>
+<pre><code>background: &lt;a href=&quot;taio://editor?action=open&amp;tag=1c1c1c&quot;&gt;#1c1c1c&lt;/a&gt;;
+background: rgba(0,0,0,0.35);
+</code></pre>
+<p>}</p>
+<p>.entry-content .portfolio-gallery .entry .title h4 {
+color: <a href="taio://editor?action=open&tag=EEE">#EEE</a>;
+display: block;
+font-size: 15px;
+font-weight: 500;
+line-height: 1.2em;
+padding: 10px;
+}</p>
+<p>.entry-content .portfolio-gallery .entry .caption {
+position: absolute;
+bottom: -40px;
+left: 0;
+width: 100%;</p>
+<pre><code>background: &lt;a href=&quot;taio://editor?action=open&amp;tag=1c1c1c&quot;&gt;#1c1c1c&lt;/a&gt;;
+background: rgba(0,0,0,0.25);
+opacity: 0;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 1s ease-in-out;
+-o-transition: all 1s ease-in-out;
+-ms-transition: all 1s ease-in-out;
+transition: all 1s ease-in-out;
+</code></pre>
+<p>}</p>
+<p>.entry-content .portfolio-gallery .entry:hover .caption {
+bottom: 0;</p>
+<pre><code>opacity: 1;
+</code></pre>
+<p>}</p>
+<p>.entry-content .portfolio-gallery .entry .caption p {
+color: <a href="taio://editor?action=open&tag=EEE">#EEE</a>;
+line-height: 1.4em;
+margin: 0;
+padding: 8px;
+}</p>
+<p>/* =Shortcodes  : Resume Entry
+-------------------------------------------------------------- */</p>
+<p>.resume-entry {
+position: relative;</p>
+<pre><code>margin-bottom: 10px;
+</code></pre>
+<p>}</p>
+<p>.resume-entry .date {
+color: <a href="taio://editor?action=open&tag=484744">#484744</a>;
+float: right;
+font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+font-size: 13px;
+font-style: italic;
+}</p>
+<p>.resume-entry h4 {
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 5px;
+}</p>
+<p>.resume-entry p {
+margin: 0;
+}</p>
+<p>.resume-entry-decoration,
+.resume-skill-decoration {
+position: absolute;
+top: 0;
+left: -36px;
+width: 6px;
+height: 100%;</p>
+<pre><code>background: url(images/resume-decoration.png);
+</code></pre>
+<p>}</p>
+<p>/* =Shortcodes  : Resume Skill
+-------------------------------------------------------------- */</p>
+<p>.resume-skill {
+position: relative;</p>
+<pre><code>margin-bottom: 10px;
+</code></pre>
+<p>}</p>
+<p>.resume-skill h4 {
+font-size: 12px;
+font-weight: bold;
+padding: 5px 0;
+}</p>
+<p>.resume-skill .bar {
+width: 75%;
+height: 25px;</p>
+<pre><code>background: &lt;a href=&quot;taio://editor?action=open&amp;tag=eeeeee&quot;&gt;#eeeeee&lt;/a&gt;;
+float: right;
+</code></pre>
+<p>}</p>
+<p>.resume-skill .bar-fill {
+position: relative;
+width: 50%;
+height: 25px;</p>
+<pre><code>background: url(images/skill-bar-bg.png);
+</code></pre>
+<p>}</p>
+<p>.resume-skill .bar-edge {
+position: absolute;
+top: 0;
+width: 6px;
+height: 25px;</p>
+<pre><code>background: url(images/skill-bar-edge.png);
+</code></pre>
+<p>}</p>
+<p>.resume-skill .bar-edge-left {
+left: 0;</p>
+<p>}</p>
+<p>.resume-skill .bar-edge-right {
+right: 0;</p>
+<p>}</p>
+<p>/* =Footer Widgets
+-------------------------------------------------------------- */</p>
+<p><a href="taio://editor?action=open&tag=footer-widgets">#footer-widgets</a> {
+margin: 0 -15px;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer-widgets">#footer-widgets</a> .widget {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+color: <a href="taio://editor?action=open&tag=777777">#777777</a>;
+float: left;
+margin-top: 25px;
+padding: 0 15px;
+word-wrap: break-word;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer-widgets">#footer-widgets</a> .widget img {
+height: auto;</p>
+<pre><code>max-width: 100%;
+</code></pre>
+<p>}</p>
+<p><a href="taio://editor?action=open&tag=footer-widgets">#footer-widgets</a> .widget h2.widgettitle {
+color: <a href="taio://editor?action=open&tag=474747">#474747</a>;
+font-size: 14px;
+margin-bottom: 10px;
+}</p>
+<p><a href="taio://editor?action=open&tag=footer-widgets">#footer-widgets</a> .widget ul li {
+margin-bottom: 4px;
+}</p>
+<p>.wpcf7-response-output {display: none!important;}</style>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://candymail.org/xmlrpc.php" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /></p>
+<link rel="alternate" href="https://candymail.org/" hreflang="en" />/>
+	<!-- This site is optimized with the Yoast SEO plugin v20.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="https://candymail.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Send Anonymous Email - candymail.org" />
+	<meta property="og:url" content="https://candymail.org/" />
+	<meta property="og:site_name" content="candymail.org" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://candymail.org/","url":"https://candymail.org/","name":"Send Anonymous Email - candymail.org","isPartOf":{"@id":"https://candymail.org/#website"},"about":{"@id":"https://candymail.org/#organization"},"datePublished":"2023-05-14T10:42:12+00:00","dateModified":"2023-05-28T21:37:18+00:00","breadcrumb":{"@id":"https://candymail.org/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://candymail.org/"]}]},{"@type":"BreadcrumbList","@id":"https://candymail.org/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":""}]},{"@type":"WebSite","@id":"https://candymail.org/#website","url":"https://candymail.org/","name":"candymail.org","description":"","publisher":{"@id":"https://candymail.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://candymail.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://candymail.org/#organization","name":"candymail.org","url":"https://candymail.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://candymail.org/#/schema/logo/image/","url":"https://candymail.org/wp-content/uploads/2023/02/candymail.jpg","contentUrl":"https://candymail.org/wp-content/uploads/2023/02/candymail.jpg","width":325,"height":90,"caption":"candymail.org"},"image":{"@id":"https://candymail.org/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+<link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="candymail.org &raquo; Feed" href="https://candymail.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="candymail.org &raquo; Comments Feed" href="https://candymail.org/comments/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/candymail.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.3"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"<span class="highlighter">typeof e&&"number"</span>typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"<span class="highlighter">typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!</span>t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://candymail.org/wp-includes/css/dist/block-library/style.min.css?ver=6.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: <a href="taio://editor?action=open&tag=000000">#000000</a>;--wp--preset--color--cyan-bluish-gray: <a href="taio://editor?action=open&tag=abb8c3">#abb8c3</a>;--wp--preset--color--white: <a href="taio://editor?action=open&tag=ffffff">#ffffff</a>;--wp--preset--color--pale-pink: <a href="taio://editor?action=open&tag=f78da7">#f78da7</a>;--wp--preset--color--vivid-red: <a href="taio://editor?action=open&tag=cf2e2e">#cf2e2e</a>;--wp--preset--color--luminous-vivid-orange: <a href="taio://editor?action=open&tag=ff6900">#ff6900</a>;--wp--preset--color--luminous-vivid-amber: <a href="taio://editor?action=open&tag=fcb900">#fcb900</a>;--wp--preset--color--light-green-cyan: <a href="taio://editor?action=open&tag=7bdcb5">#7bdcb5</a>;--wp--preset--color--vivid-green-cyan: <a href="taio://editor?action=open&tag=00d084">#00d084</a>;--wp--preset--color--pale-cyan-blue: <a href="taio://editor?action=open&tag=8ed1fc">#8ed1fc</a>;--wp--preset--color--vivid-cyan-blue: <a href="taio://editor?action=open&tag=0693e3">#0693e3</a>;--wp--preset--color--vivid-purple: <a href="taio://editor?action=open&tag=9b51e0">#9b51e0</a>;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://candymail.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.4' type='text/css' media='all' />
+<link rel='stylesheet' id='popularis-extra-css' href='https://candymail.org/wp-content/plugins/popularis-extra/assets/css/style.css?ver=1.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google-webfonts-css' href='https://fonts.googleapis.com/css?family=Droid+Sans&#038;ver=6.3' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//candymail.org/wp-content/uploads/pum/pum-site-styles.css?generated=1681067740&#038;ver=1.18.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://candymail.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://candymail.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://candymail.org/wp-json/" /><link rel="alternate" type="application/json" href="https://candymail.org/wp-json/wp/v2/pages/171" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://candymail.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3" />
+<link rel='shortlink' href='https://candymail.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://candymail.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcandymail.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://candymail.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcandymail.org%2F&#038;format=xml" />
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("https://candymail.org/wp-content/themes/vcard/images/bg.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<link rel="icon" href="https://candymail.org/wp-content/uploads/2023/02/cropped-candymail-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://candymail.org/wp-content/uploads/2023/02/cropped-candymail-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://candymail.org/wp-content/uploads/2023/02/cropped-candymail-180x180.png" />
+<meta name="msapplication-TileImage" content="https://candymail.org/wp-content/uploads/2023/02/cropped-candymail-270x270.png" />
+	<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+	<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3293991", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = "https://top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3293991;js=na" style="position:absolute;left:-9999px;" alt="" /></div></noscript>
+</head>
+<body class="home page-template-default page page-id-171 custom-background wp-custom-logo">
+<div class="container">
+	<div id="page">
+				<div id="page-decoration">
+				<!-- Yandex.RTB R-A-2268177-1 -->
+				<div id="yandex_rtb_R-A-2268177-1"></div>
+				<script>window.yaContextCb.push(()=>{
+				Ya.Context.AdvManager.render({
+					renderTo: 'yandex_rtb_R-A-2268177-1',
+					blockId: 'R-A-2268177-1'
+				})
+				})</script>
+		</div>
+		<div id="site-info">
+			<a href="https://candymail.org" title="candymail.org - ">
+				<img src="https://candymail.org/wp-content/uploads/2023/02/candymail.jpg" >
+			</a>
+			<div class="clear"></div>
+		</div>
+		<div id="content"> 
+<div id="post-171" class="post post-171 page type-page status-publish hentry">
+	<div class="entry-content">
+		<table style="height: auto !important;" border="0" width="100%" cellspacing="5" cellpadding="5">
+<tbody>
+<tr style="height: auto !important;">
+</ul>
+</td>
+<td style="height: auto !important;" valign="top" width="54%">
+<table style="height: auto !important;" width="350" cellspacing="3" cellpadding="0" align="center" bgcolor="#EFEFEF">
+<tbody>
+<tr style="height: auto !important;" valign="top">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="112" />
+<input type="hidden" name="_wpcf7_version" value="5.7.4" />
+<input type="hidden" name="_wpcf7_locale" value="ru_RU" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f112-p171-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="171" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label> Receiver’s email<br />
+<span class="wpcf7-form-control-wrap" data-name="who-email"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="receiver@email.com" value="15306516364@tmomail.net" type="email" name="who-email" /></span> </label><br />
+<label> Sender’s email<br />
+<span class="wpcf7-form-control-wrap" data-name="whom-email"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="sender@email.com" value="" type="email" name="whom-email" /></span> </label>
+</p>
+<p><label> Subject<br />
+<span class="wpcf7-form-control-wrap" data-name="for-subject"><input size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Subject" value="" type="text" name="for-subject" /></span> </label>
+</p>
+<p><label><br />
+<span class="wpcf7-form-control-wrap" data-name="for-message"><textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="enter message…" name="for-message"></textarea></span> </label>
+</p>
+<div class="wpcf7-submit-ya">
+	<p><input class="wpcf7-form-control has-spinner wpcf7-submit" type="submit" value="SEND!" />
+	</p>
+</div><p style="display: none !important;"><label>&#916;<textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="_wpcf7_ak_js" value="8"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p><input type='hidden' class='wpcf7-pum' value='{"closepopup":true,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output" aria-hidden="false"></div>
+</form>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="3" align="center"><!-- Yandex.RTB R-A-2268177-2 --></p>
+<div id="yandex_rtb_R-A-2268177-2"></div>
+<p><script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-2268177-2',
+    blockId: 'R-A-2268177-2'
+  })
+})</script></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+		<div class="clear"></div>
+	</div>
+</div>
+		</div>
+		<ul id="footer-widgets">
+			<li id="polylang-3" class="widget widget_polylang"><ul>
+	<li class="lang-item lang-item-6 lang-item-en current-lang lang-item-first"><a  lang="en-US" hreflang="en-US" href="https://candymail.org/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAmVBMVEViZsViZMJiYrf9gnL8eWrlYkjgYkjZYkj8/PujwPybvPz4+PetraBEgfo+fvo3efkydfkqcvj8Y2T8UlL8Q0P8MzP9k4Hz8/Lu7u4DdPj9/VrKysI9fPoDc/EAZ7z7IiLHYkjp6ekCcOTk5OIASbfY/v21takAJrT5Dg6sYkjc3Nn94t2RkYD+y8KeYkjs/v7l5fz0dF22YkjWvcOLAAAAgElEQVR4AR2KNULFQBgGZ5J13KGGKvc/Cw1uPe62eb9+Jr1EUBFHSgxxjP2Eca6AfUSfVlUfBvm1Ui1bqafctqMndNkXpb01h5TLx4b6TIXgwOCHfjv+/Pz+5vPRw7txGWT2h6yO0/GaYltIp5PT1dEpLNPL/SdWjYjAAZtvRPgHJX4Xio+DSrkAAAAASUVORK5CYII=" alt="English" width="16" height="11" style="width: 16px; height: 11px;" /><span style="margin-left:0.3em;">English</span></a></li>
+	<li class="lang-item lang-item-9 lang-item-ru"><a  lang="ru-RU" hreflang="ru-RU" href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAdVBMVEX19f/u7vjm5/H+/v75+fng4Ove3ulFRfyysv6cnP6QkPmIiPh/f/YAAOYAAP1ycv5QUP06OvkxMfcoKPcgIPYUFPS0AADdaYzTRG/RPGnOM2LKLFzIIVPCEUZ7AAD0AQH7YGH3ODj0JyfzERDgAAD4TU3pAABIfLuPAAAAT0lEQVR4AQXBAQqDMAAAsZytyHzA/v9LYRS7JIAQMkBb0ATsgLoKInnHvIrHrdRaBzxupTDxuFUifUsp4R3zU4iwzmOyT1ibBtP2u3C+wB+SHBB5JNY7DAAAAABJRU5ErkJggg==" alt="Русский" width="16" height="11" style="width: 16px; height: 11px;" /><span style="margin-left:0.3em;">Русский</span></a></li>
+	<li class="lang-item lang-item-13 lang-item-et"><a  lang="et" hreflang="et" href="https://candymail.org/et/send-anonymous-email-eesti/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAAnElEQVR4AWNgsD+Agoz2QJHsZgRiXwpHIA1VG57CUd7KR3AUN/8+BAXPvANE7hNvMDDMgGqAS8DlgMiq4yoEqddeACIUDfhVQxCQDdIABEVFxcFg4AUGDmBgYWFhaGiorqEBRBJgABQBKoZqIKAaUwNu1QgAFASpfvz48W8k8B0JfMYAhw4dQmjAVA0k8WkAShNrww0McAoGDmEAAOE7JtV20p1HAAAAAElFTkSuQmCC" alt="Eesti" width="16" height="11" style="width: 16px; height: 11px;" /><span style="margin-left:0.3em;">Eesti</span></a></li>
+	<li class="lang-item lang-item-23 lang-item-es"><a  lang="es-ES" hreflang="es-ES" href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAflBMVEX/AAD9AAD3AADxAADrAAD/eXn9bGz8YWH8WVn6UVH5SEj5Pz/3NDT0Kir9/QD+/nL+/lT18lDt4Uf6+j/39zD39yf19R3n5wDxflXsZ1Pt4Y3x8zr0wbLs1NXz8xPj4wD37t3jmkvsUU/Bz6nrykm3vJ72IiL0FBTyDAvhAABEt4UZAAAAX0lEQVR4AQXBQUrFQBBAwXqTDkYE94Jb73+qfwVRcYxVQRBRToiUfoaVpGTrtdS9SO0Z9FR9lVy/g5c99+dKl30N5uxPuviexXEc9/msC7TOkd4kHu/Dlh4itCJ8AP4B0w4Qwmm7CFQAAAAASUVORK5CYII=" alt="Español" width="16" height="11" style="width: 16px; height: 11px;" /><span style="margin-left:0.3em;">Español</span></a></li>
+</ul>
+</li>
+		<li id="recent-posts-2" class="widget widget_recent_entries">
+		<h2 class="widgettitle">Recent Posts</h2>
+		<ul>											<li>
+									</li>
+											<li>
+					<a href="">Decoding Domain Rating: Unveiling the Mystery behind Ahrefs&#8217; Metric</a>
+									</li>
+											<li>
+					<a href="">Understanding Website Link Profile: Building the Foundation for Successful SEO</a>
+									</li>
+											<li>
+					<a href="">The Power of Backlinks: Unleashing the Potential for Website Growth</a>
+									</li>
+					</ul>
+		</li>
+			<div class="clear"></div>
+		</ul>
+		<div id="page-top"></div>
+		<div id="page-bottom"></div>
+		<div id="page-shadow"></div>
+	</div>
+	<div id="footer">
+		<div class="copyright">Copyright candymail.org</div>
+		<div class="designed">2007 - 2023</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div id="pum-132" class="pum pum-overlay pum-theme-125 pum-theme-enterprise-blue popmake-overlay form_submission click_open" data-popmake="{&quot;id&quot;:132,&quot;slug&quot;:&quot;popopyandex&quot;,&quot;theme_id&quot;:125,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;form_submission&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;form&quot;:&quot;contactform7_112&quot;,&quot;delay&quot;:&quot;0&quot;}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;30000&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-modal="false"
+								   	aria-labelledby="pum_popup_title_132">
+			</div>
+				<div class="pum-content popmake-content" tabindex="0">
+					</div>
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+	</div>
+</div>
+<div id="pum-135" class="pum pum-overlay pum-theme-125 pum-theme-enterprise-blue popmake-overlay form_submission click_open" data-popmake="{&quot;id&quot;:135,&quot;slug&quot;:&quot;popap-jandeks&quot;,&quot;theme_id&quot;:125,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;form_submission&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;form&quot;:&quot;contactform7_118&quot;,&quot;delay&quot;:&quot;0&quot;}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;normal&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;30000&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-modal="false"
+								   	aria-labelledby="pum_popup_title_135">
+	<div id="popmake-135" class="pum-container popmake theme-125 pum-responsive pum-responsive-normal responsive size-normal">
+				<div class="pum-content popmake-content" tabindex="0">
+					</div>
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+	</div>
+</div>
+<script type='text/javascript' src='https://candymail.org/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.4' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/candymail.org\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://candymail.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.4' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://candymail.org/wp-includes/js/comment-reply.min.js?ver=6.3' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://candymail.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js'></script>
+<script type='text/javascript' id='popup-maker-site-js-extra'>
+/* <![CDATA[ */
+var pum_vars = {"version":"1.18.1","pm_dir_url":"https:\/\/candymail.org\/wp-content\/plugins\/popup-maker\/","ajaxurl":"https:\/\/candymail.org\/wp-admin\/admin-ajax.php","restapi":"https:\/\/candymail.org\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"123","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_route":"analytics","analytics_api":"https:\/\/candymail.org\/wp-json\/pum\/v1"};
+var pum_sub_vars = {"ajaxurl":"https:\/\/candymail.org\/wp-admin\/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-132":{"triggers":[{"type":"form_submission","settings":{"cookie_name":"","form":"contactform7_112","delay":"0"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"125","size":"normal","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"30000","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"enterprise-blue","id":132,"slug":"popopyandex"},"pum-135":{"triggers":[{"type":"form_submission","settings":{"cookie_name":"","form":"contactform7_118","delay":"0"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"125","size":"normal","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":true,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"30000","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":true,"close_on_esc_press":true,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"enterprise-blue","id":135,"slug":"popap-jandeks"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//candymail.org/wp-content/uploads/pum/pum-site-scripts.js?defer&#038;generated=1681067740&#038;ver=1.18.1' id='popup-maker-site-js'></script>
+<script>
+jQuery(document).ready(function () {
+jQuery('#pum-132')
+    .on('pumAfterOpen', function () {
+	jQuery("#pum-132 .pum-content").html('<div id="yandex_rtb_R-A-2268177-3"></div>')
+       setTimeout(function () {
+<pre><code>  window.yaContextCb.push(()=&gt;{
+    
+    });
+    }, 1500);
+});
+</code></pre>
+<p>jQuery('#pum-135')
+.on('pumAfterOpen', function () {
+jQuery(&quot;#pum-132 .pum-content&quot;).html('<div id="yandex_rtb_R-A-2268177-3"></div>')
+setTimeout(function () {
+window.yaContextCb.push(()=&gt;{
+Ya.Context.AdvManager.render({
+renderTo: 'yandex_rtb_R-A-2268177-3',
+blockId: 'R-A-2268177-3'
+})
+});
+}, 1500);
+});
+});
+</script></p>
+<div id="yandex_rtb_R-A-2268177-3"></div>
+</body>
+</html>
+</article>
+  
+  
+  
+  
+</body>
+<script>
+  // Translate vectors to <object> to properly use online fonts
+  const images = document.querySelectorAll("img");
+  images.forEach(image => {
+    const source = image.src;
+    if (source.includes("image/svg+xml") || source.toLowerCase().endsWith(".svg")) {
+      const object = document.createElement("object");
+      object.setAttribute("data", source);
+      image.parentNode.replaceChild(object, image);
+    }
+  });
+</script>
+<style>
+  
+</style>
+<script>
+  
+</script>
+</html>
