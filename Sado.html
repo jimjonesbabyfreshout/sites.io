@@ -1178,20 +1178,7 @@
     <body class="arealman">
         <div id="nav-overlay"></div>
         <nav id="arm_topnav"></nav>
-        <script>
-            window.mh_arr = window.mh_arr || [],
-            window.mh_arr.push((function() {
-                var a=!0, o=!0, r=!1; function e(r=!0) {
-                    var e = $("#arm_topnav_open"), t = $("#nav-overlay, #arm_topnav_sidebar, #arm_topnav_close"); r?(o || n(!1), t.show(), e.hide()): (t.hide(), e.show()), a=!r
-                }function n(n=!0) {
-                    var t = $("#arm_mybar_open"), l = $("#nav-overlay, #arm_topnav_mycontent, #arm_mybar_close"); n?(a || e(!1), l.show(), t.hide(), r || aload("https://www.arealme.com/static/mybar.js", (function() {
-                        $(".mybar-loading").remove(), $(".mybar-unload").removeClass("mybar-unload")})), r=!0): (l.hide(), t.show()), o=!n
-                }if ($("#arm_topnav_toggle").on("touchstart click", (function(o) {
-                        o.preventDefault(), e(a)})), $("#arm_topnav_mybar").on("touchstart click", (function(a) {
-                        a.preventDefault(), n(o)})), $("#nav-overlay").click((function() {
-                        e(!1), n(!1)})), $(".category_label").length > 0) {
-                    var t = $(".category_label")[0].outerHTML.replace("category_label", "nav-category"); $("#arm_topnav_home").after('<svg class="breadcrumb-sep" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.4 12"><path fill="#999" fill-rule="nonzero" d="M0 1.4 4.6 6 0 10.6 1.4 12l6-6-6-6z"/></svg>'+t)}}))
-        </script>
+    <script>window.mh_arr=window.mh_arr||[],window.mh_arr.push((function(){var a=!0,o=!0,r=!1;function e(r=!0){var e=$("#arm_topnav_open"),t=$("#nav-overlay, #arm_topnav_sidebar, #arm_topnav_close");r?(o||n(!1),t.show(),e.hide()):(t.hide(),e.show()),a=!r}function n(n=!0){var t=$("#arm_mybar_open"),l=$("#nav-overlay, #arm_topnav_mycontent, #arm_mybar_close");n?(a||e(!1),l.show(),t.hide(),r||aload("https://www.arealme.com/static/mybar.js",(function(){$(".mybar-loading").remove(),$(".mybar-unload").removeClass("mybar-unload")})),r=!0):(l.hide(),t.show()),o=!n}if($("#arm_topnav_toggle").on("touchstart click",(function(o){o.preventDefault(),e(a)})),$("#arm_topnav_mybar").on("touchstart click",(function(a){a.preventDefault(),n(o)})),$("#nav-overlay").click((function(){e(!1),n(!1)})),$(".category_label").length>0){var t=$(".category_label")[0].outerHTML.replace("category_label","nav-category");$("#arm_topnav_home").after('<svg class="breadcrumb-sep" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7.4 12"><path fill="#999" fill-rule="nonzero" d="M0 1.4 4.6 6 0 10.6 1.4 12l6-6-6-6z"/></svg>'+t)}}))</script>
         <div id="progress">
             <div id="progress-bg"></div>
             <div id="progress-counter">
